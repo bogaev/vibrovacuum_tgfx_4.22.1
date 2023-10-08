@@ -1,0 +1,7 @@
+EWARM/**/BrowseInfo/
+EWARM/**/Exe/
+EWARM/**/Obj/
+EWARM/settings/
+EWARM/*.dep
+EWARM/**/
+Drivers/
