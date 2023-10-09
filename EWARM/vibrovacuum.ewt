@@ -1436,6 +1436,24 @@
             <file>
                 <name>$PROJ_DIR$\..\app\components\IS42S16400J-7TLI.h</name>
             </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\components\n25q128a.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\components\n25q128a_qspi.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\components\n25q128a_qspi.h</name>
+            </file>
+        </group>
+        <group>
+            <name>tests</name>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\hw_components_tests.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\hw_components_tests.h</name>
+            </file>
         </group>
     </group>
     <group>
@@ -1528,6 +1546,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_qspi.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc.c</name>

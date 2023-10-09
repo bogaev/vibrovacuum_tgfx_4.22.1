@@ -24,7 +24,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "assert.h"
+#include "components/n25q128a_qspi.h"
+#include "components/IS42S16400J-7TLI.h"
+#include "tests/hw_components_tests.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,17 +47,13 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-#define W 1024
-#define H 600
-#define SIZE 2000
-//uint16_t framebuffer[W*H];  //16 bpp framebuffer
-volatile uint16_t *framebuffer = (uint16_t*) 0xD0000000;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+extern void SDRAM_InitEx();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -94,32 +92,10 @@ int main(void)
   MX_LTDC_Init();
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
-//  HAL_LTDC_SetAddress(&hltdc, (uint32_t)framebuffer, LTDC_LAYER_1);
   SDRAM_InitEx();
-
-#if 0
-  HAL_Delay(10);
-  volatile uint32_t *externalRAM = (uint32_t*) 0xD0000000;
-  uint32_t sourcedata[SIZE];
-  for(int i = 0; i < SIZE; i++) {
-      sourcedata[i] = i;
-  }
-
-  int begin1 = HAL_GetTick();
-  //write external RAM
-  for(int i = 0; i < SIZE; i++) {
-      externalRAM[i] = sourcedata[i];
-  }
-  int end1 = HAL_GetTick();
-  //read external RAM
-  int begin2 = HAL_GetTick();
-  //Read external RAM
-  for(int i = 0; i < SIZE; i++) {
-      sourcedata[i] = externalRAM[i];
-      assert(sourcedata[i] == i);
-  }
-  int end2 = HAL_GetTick();
-#endif
+  BSP_QSPI_Init();
+  External_SDRAM_ReadWriteTest();
+  ExternalFlashReadWriteTest();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -186,37 +162,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-uint8_t r = 0x00, g = 0x00, b = 0x00;
-uint16_t col = 0;
-uint8_t color = 1;
-void HAL_LTDC_LineEventCallback(LTDC_HandleTypeDef* hltdc) {
-  static int count = 0;
-  count++;
-  if (count >= 30) {
-    count = 0;
-    switch (color) {
-      case 1:
-        r = 0xFF; g = 0x00; b = 0x00;
-        color = 2;
-        break;
-      case 2:
-        r = 0x00; g = 0xFF; b = 0x00;
-        color = 3;
-        break;
-      case 3:
-        r = 0x00; g = 0x00; b = 0xFF;
-        color = 1;
-        break;
-      default:
-        break;
-    }
-    col = ((r>>3)<<11) | ((g>>2)<<5) | (b>>3);  // Convert colors to RGB565
-    // Put colors into the framebuffer
-    for(int i = 0; i < W*H; i++) {
-      framebuffer[i] = col;
-    }
-  }
-}
+
 /* USER CODE END 4 */
 
 /**
