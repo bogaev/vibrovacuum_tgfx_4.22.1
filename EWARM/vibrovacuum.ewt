@@ -1553,10 +1553,16 @@
             <group>
                 <name>Core</name>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\crc.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\dma2d.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\fmc.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\freertos.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\gpio.c</name>
@@ -1586,6 +1592,42 @@
                     <name>$PROJ_DIR$\..\Core\Src\tim.c</name>
                 </file>
             </group>
+            <group>
+                <name>TouchGFX</name>
+                <group>
+                    <name>App</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\TouchGFX\App\app_touchgfx.c</name>
+                    </file>
+                </group>
+                <group>
+                    <name>target</name>
+                    <group>
+                        <name>generated</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\OSWrappers.cpp</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\STM32DMA.cpp</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\TouchGFXConfiguration.cpp</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\TouchGFXGeneratedHAL.cpp</name>
+                        </file>
+                    </group>
+                    <file>
+                        <name>$PROJ_DIR$\..\TouchGFX\target\STM32TouchController.cpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\TouchGFX\target\TouchGFXGPIO.cpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\TouchGFX\target\TouchGFXHAL.cpp</name>
+                    </file>
+                </group>
+            </group>
         </group>
     </group>
     <group>
@@ -1603,6 +1645,12 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_cortex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_crc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_crc_ex.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma.c</name>
@@ -1669,4 +1717,166 @@
             </file>
         </group>
     </group>
+    <group>
+        <name>Middlewares</name>
+        <group>
+            <name>FreeRTOS</name>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\croutine.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\list.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM7\r0p1\port.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM7\r0p1\portasm.s</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\queue.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\tasks.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\timers.c</name>
+            </file>
+        </group>
+    </group>
+    <group>
+        <name>TouchGFX</name>
+        <group>
+            <name>generated</name>
+            <group>
+                <name>fonts</name>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\ApplicationFontProvider.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\CachedFont.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_10_4bpp_0.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_20_4bpp_0.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Font_verdana_40_4bpp_0.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\FontCache.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\GeneratedFont.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_10_4bpp.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_20_4bpp.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Kerning_verdana_40_4bpp.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_10_4bpp.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_20_4bpp.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\Table_verdana_40_4bpp.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\fonts\src\UnmappedDataFont.cpp</name>
+                </file>
+            </group>
+            <group>
+                <name>gui_generated</name>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\common\FrontendApplicationBase.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\gui_generated\src\screen_screen\screenViewBase.cpp</name>
+                </file>
+            </group>
+            <group>
+                <name>images</name>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__generated\image_alternate_theme_images_textures_seamless_texture_1.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__generated\image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\__generated\image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\SVGDatabase.cpp</name>
+                </file>
+            </group>
+            <group>
+                <name>texts</name>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\LanguageGb.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\Texts.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\generated\texts\src\TypedTextDatabase.cpp</name>
+                </file>
+            </group>
+        </group>
+        <group>
+            <name>gui</name>
+            <group>
+                <name>common</name>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\gui\src\common\FrontendApplication.cpp</name>
+                </file>
+            </group>
+            <group>
+                <name>model</name>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\gui\src\model\Model.cpp</name>
+                </file>
+            </group>
+            <group>
+                <name>screen_screen</name>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\gui\src\screen_screen\screenPresenter.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\TouchGFX\gui\src\screen_screen\screenView.cpp</name>
+                </file>
+            </group>
+        </group>
+        <group>
+            <name>Lib</name>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\ST\touchgfx\lib\core\cortex_m7\IAR9.x\touchgfx_core.a</name>
+            </file>
+        </group>
+    </group>
+    <file>
+        <name>$PROJ_DIR$\vibrovacuum.ipcf</name>
+    </file>
 </project>

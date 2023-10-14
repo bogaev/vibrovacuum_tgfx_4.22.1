@@ -1,10 +1,10 @@
 #ifndef _CONFIG_TESTS_H_
 #define _CONFIG_TESTS_H_
 
-#define LTDC_TEST_ON
-#define SDRAM_TEST_ON
-#define FLASH_TEST_ON
-#define DMA2D_TEST_ON
+//#define LTDC_TEST_ON
+//#define SDRAM_TEST_ON
+//#define FLASH_TEST_ON
+//#define DMA2D_TEST_ON
 #define TOUCH_TEST_ON
 
 #ifdef LTDC_TEST_ON

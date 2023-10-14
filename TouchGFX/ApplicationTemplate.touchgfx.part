@@ -1,0 +1,30 @@
+
+{
+  "Application": {
+    "Name": "vibrovacuum",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "AvailableColorDepths": [ 32 ],
+    "AvailableLCDs":
+    {
+      "32": "LCD32bpp"
+    },
+    "AvailableResolutions": [
+      {
+        "Width": 1024,
+        "Height": 600
+      }
+    ],
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "Family": "STM32F7",
+    "SubFamily": "STM32F7x6",
+    "Platform": "m7",
+    "Toolchain": "EWARM V8.50",
+    "ProjectFile": "../vibrovacuum.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [
+    ],
+    "AdditionalFeatures": [
+    ]
+  },
+  "Version": "4.22.1"
+}

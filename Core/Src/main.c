@@ -18,11 +18,14 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
+#include "crc.h"
 #include "dma2d.h"
 #include "ltdc.h"
 #include "tim.h"
 #include "gpio.h"
 #include "fmc.h"
+#include "app_touchgfx.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -54,6 +57,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
 extern HAL_StatusTypeDef LCD_TouchInit(void);
 /* USER CODE END PFP */
@@ -95,6 +99,10 @@ int main(void)
   MX_FMC_Init();
   MX_DMA2D_Init();
   MX_TIM11_Init();
+  MX_CRC_Init();
+  MX_TouchGFX_Init();
+  /* Call PreOsInit function */
+  MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
   SDRAM_InitEx();
 
@@ -120,6 +128,14 @@ int main(void)
 #endif
   /* USER CODE END 2 */
 
+  /* Init scheduler */
+  osKernelInitialize();  /* Call init function for freertos objects (in freertos.c) */
+  MX_FREERTOS_Init();
+
+  /* Start scheduler */
+  osKernelStart();
+
+  /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)

@@ -5,3 +5,5 @@ EWARM/settings/
 EWARM/*.dep
 EWARM/**/
 Drivers/
+TouchGFX/build/
+TouchGFX/generated/
