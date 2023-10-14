@@ -18,15 +18,17 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma2d.h"
 #include "ltdc.h"
+#include "tim.h"
 #include "gpio.h"
 #include "fmc.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "components/n25q128a_qspi.h"
-#include "components/IS42S16400J-7TLI.h"
-#include "tests/hw_components_tests.h"
+#include "components/flash/n25q128a_qspi.h"
+#include "components/sdram/is42S16400j-7tli.h"
+#include "tests/config_tests.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,7 +55,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-extern void SDRAM_InitEx();
+extern HAL_StatusTypeDef LCD_TouchInit(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -91,11 +93,31 @@ int main(void)
   MX_GPIO_Init();
   MX_LTDC_Init();
   MX_FMC_Init();
+  MX_DMA2D_Init();
+  MX_TIM11_Init();
   /* USER CODE BEGIN 2 */
   SDRAM_InitEx();
+
+#ifdef LTDC_TEST_ON
+  // 4 секунды будет менятся цвет заливки: красный, зеленый, синий
+  LtdcSdramItTest();
+#endif
+#ifdef SDRAM_TEST_ON
+  // тест на запись и чтение с проверкой правильности значений
+  if (ExternalSdramReadWriteTest() != HAL_OK) Error_Handler();
+#endif
+#ifdef FLASH_TEST_ON
   BSP_QSPI_Init();
-  External_SDRAM_ReadWriteTest();
-  ExternalFlashReadWriteTest();
+  // тест на запись и чтение с проверкой правильности значений
+  if (ExternalFlashReadWriteTest() != HAL_OK) Error_Handler();
+#endif
+#ifdef DMA2D_TEST_ON
+  // будет менятся цвет заливки: белый, красный, зеленый, синий
+  if (Dma2dTest() != HAL_OK) Error_Handler();
+#endif
+#ifdef TOUCH_TEST_ON
+  if (LCD_TouchInit() != HAL_OK) Error_Handler();
+#endif
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -197,6 +219,8 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
+    HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+    HAL_Delay(1000);
   }
   /* USER CODE END Error_Handler_Debug */
 }

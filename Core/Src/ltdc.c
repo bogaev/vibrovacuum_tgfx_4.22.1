@@ -63,23 +63,23 @@ void MX_LTDC_Init(void)
   pLayerCfg.WindowX1 = 1024;
   pLayerCfg.WindowY0 = 0;
   pLayerCfg.WindowY1 = 600;
-  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB565;
+  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_ARGB8888;
   pLayerCfg.Alpha = 0xFF;
   pLayerCfg.Alpha0 = 0xFF;
-  pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_PAxCA;
-  pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_PAxCA;
+  pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_CA;
+  pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_CA;
   pLayerCfg.FBStartAdress = 0xD0000000;
   pLayerCfg.ImageWidth = 1024;
   pLayerCfg.ImageHeight = 600;
   pLayerCfg.Backcolor.Blue = 0;
-  pLayerCfg.Backcolor.Green = 0;
-  pLayerCfg.Backcolor.Red = 0xFF;
+  pLayerCfg.Backcolor.Green = 0xFF;
+  pLayerCfg.Backcolor.Red = 0;
   if (HAL_LTDC_ConfigLayer(&hltdc, &pLayerCfg, 0) != HAL_OK)
   {
     Error_Handler();
   }
   /* USER CODE BEGIN LTDC_Init 2 */
-  LTDC->IER |= LTDC_IER_LIE; // Enable LTDC interrupts
+
   /* USER CODE END LTDC_Init 2 */
 
 }
@@ -217,7 +217,7 @@ void HAL_LTDC_MspInit(LTDC_HandleTypeDef* ltdcHandle)
     HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
     /* LTDC interrupt Init */
-    HAL_NVIC_SetPriority(LTDC_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(LTDC_IRQn, 1, 0);
     HAL_NVIC_EnableIRQ(LTDC_IRQn);
   /* USER CODE BEGIN LTDC_MspInit 1 */
 

@@ -1430,29 +1430,113 @@
         <name>app</name>
         <group>
             <name>components</name>
-            <file>
-                <name>$PROJ_DIR$\..\app\components\IS42S16400J-7TLI.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\app\components\IS42S16400J-7TLI.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\app\components\n25q128a.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\app\components\n25q128a_qspi.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\app\components\n25q128a_qspi.h</name>
-            </file>
+            <group>
+                <name>flash</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\flash\n25q128a.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\flash\n25q128a_qspi.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\flash\n25q128a_qspi.h</name>
+                </file>
+            </group>
+            <group>
+                <name>lcd_touch</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\lcd_touch\lcd_touch.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\lcd_touch\lcd_touch.hpp</name>
+                </file>
+            </group>
+            <group>
+                <name>sdram</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\sdram\is42S16400j-7tli.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\sdram\is42S16400j-7tli.h</name>
+                </file>
+            </group>
+            <group>
+                <name>touch</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\CT_I2C.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\CT_I2C.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\GT811.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\GT811.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\gt811_waveshare.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\gt811_waveshare.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\gt911.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\gt911.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\touch_screen_factory.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\touch_screen_interface.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\TS_I2C.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\components\touch\TS_I2C.h</name>
+                </file>
+                <configuration>
+                    <name>vibrovacuum</name>
+                </configuration>
+            </group>
         </group>
         <group>
             <name>tests</name>
             <file>
-                <name>$PROJ_DIR$\..\app\tests\hw_components_tests.c</name>
+                <name>$PROJ_DIR$\..\app\tests\config_tests.h</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\app\tests\hw_components_tests.h</name>
+                <name>$PROJ_DIR$\..\app\tests\dma2d_tests.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\dma2d_tests.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\flash_tests.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\flash_tests.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\ltdc_tests.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\ltdc_tests.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\RGB565_240x130_1.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\RGB565_240x130_2.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\sdram_tests.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\tests\sdram_tests.h</name>
             </file>
         </group>
     </group>
@@ -1469,16 +1553,25 @@
             <group>
                 <name>Core</name>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\dma2d.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\fmc.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\gpio.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\i2c.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\ltdc.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\main.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\quadspi.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32f7xx_hal_msp.c</name>
@@ -1488,6 +1581,9 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32f7xx_it.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\tim.c</name>
                 </file>
             </group>
         </group>
@@ -1510,6 +1606,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma2d.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma_ex.c</name>

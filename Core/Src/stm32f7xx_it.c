@@ -22,6 +22,7 @@
 #include "stm32f7xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "tests/config_tests.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -31,7 +32,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+extern void LCD_TIM_Callback();
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -56,7 +57,9 @@ volatile int diff = 0;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern DMA2D_HandleTypeDef hdma2d;
 extern LTDC_HandleTypeDef hltdc;
+extern TIM_HandleTypeDef htim11;
 extern TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN EV */
@@ -202,6 +205,34 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
+  * @brief This function handles EXTI line[9:5] interrupts.
+  */
+void EXTI9_5_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI9_5_IRQn 0 */
+
+  /* USER CODE END EXTI9_5_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(LCD_INTRPT_Pin);
+  /* USER CODE BEGIN EXTI9_5_IRQn 1 */
+//    EXTI->IMR &= ~EXTI_EMR_MR7;
+  /* USER CODE END EXTI9_5_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM1 trigger and commutation interrupts and TIM11 global interrupt.
+  */
+void TIM1_TRG_COM_TIM11_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM1_TRG_COM_TIM11_IRQn 0 */
+
+  /* USER CODE END TIM1_TRG_COM_TIM11_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim11);
+  /* USER CODE BEGIN TIM1_TRG_COM_TIM11_IRQn 1 */
+  LCD_TIM_Callback();
+  /* USER CODE END TIM1_TRG_COM_TIM11_IRQn 1 */
+}
+
+/**
   * @brief This function handles TIM6 global interrupt, DAC1 and DAC2 underrun error interrupts.
   */
 void TIM6_DAC_IRQHandler(void)
@@ -227,8 +258,24 @@ void LTDC_IRQHandler(void)
   /* USER CODE END LTDC_IRQn 0 */
   HAL_LTDC_IRQHandler(&hltdc);
   /* USER CODE BEGIN LTDC_IRQn 1 */
-  HAL_LTDC_ProgramLineEvent(&hltdc,0);
+#ifdef LTDC_TEST_ON
+  HAL_LTDC_ProgramLineEvent(&hltdc, 0);
+#endif
   /* USER CODE END LTDC_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA2D global interrupt.
+  */
+void DMA2D_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA2D_IRQn 0 */
+
+  /* USER CODE END DMA2D_IRQn 0 */
+  HAL_DMA2D_IRQHandler(&hdma2d);
+  /* USER CODE BEGIN DMA2D_IRQn 1 */
+
+  /* USER CODE END DMA2D_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
