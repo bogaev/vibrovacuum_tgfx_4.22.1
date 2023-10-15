@@ -24,12 +24,20 @@
 
 #include <STM32TouchController.hpp>
 
+#include "main.h"
+#include "components/lcd_touch/lcd_touch.hpp"
+
+extern LcdTouch screen;
+
 void STM32TouchController::init()
 {
     /**
      * Initialize touch controller and driver
      *
      */
+  if (LCD_TouchInit() != HAL_OK) {
+    Error_Handler();
+  }
 }
 
 bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
@@ -44,7 +52,7 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
      * By default sampleTouch is called every tick, this can be adjusted by HAL::setTouchSampleRate(int8_t);
      *
      */
-    return false;
+    return screen.TouchCheckState(x, y);
 }
 
 /* USER CODE END STM32TouchController */

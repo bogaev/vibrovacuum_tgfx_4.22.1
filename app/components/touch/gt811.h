@@ -48,7 +48,7 @@ typedef struct
 
 //uint8_t GT811_Init(void);
 uint16_t GT811_ReadID(void);
-void GT811_GetState(TS_StateTypeDef *TS_State);
+bool GT811_GetState(TS_StateTypeDef *TS_State);
 
 #ifdef __cplusplus
 }
@@ -57,23 +57,8 @@ void GT811_GetState(TS_StateTypeDef *TS_State);
 class Gt811 : public TouchScreen {
 public:
   HAL_StatusTypeDef Init() override;
-  void CheckState() override;
+  bool CheckState(int32_t& x, int32_t& y) override;
   void SetEvent() override;
-  Coord GetCoordinates() override {
-    return{};
-  }
 };
 
-/**
-* @}
-*/
-
-/**
-* @}
-*/
-
-/**
-* @}
-*/
 #endif
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

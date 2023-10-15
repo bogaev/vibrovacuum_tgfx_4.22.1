@@ -105,7 +105,7 @@ uint16_t GT811_ReadID()
 }
 
 
-void GT811_GetState(TS_StateTypeDef *TS_State)
+bool GT811_GetState(TS_StateTypeDef *TS_State)
 {
   uint8_t RegBuf[34];
 
@@ -142,17 +142,25 @@ void GT811_GetState(TS_StateTypeDef *TS_State)
     TS_State->touchY[4] = GT811_MAX_HEIGHT - (((uint16_t)RegBuf[0x1C] << 8) + RegBuf[0x1D]);
     TS_State->touchX[4] = (((uint16_t)RegBuf[0x1E] << 8) + RegBuf[0x1F]);
     TS_State->touchWeight[4] = RegBuf[0x20];
-  }
 
+    return true;
+  }
+  return false;
 }
 
 HAL_StatusTypeDef Gt811::Init() {
   return GT811_Init();
 }
 
-void Gt811::CheckState() {
+bool Gt811::CheckState(int32_t& x, int32_t& y) {
   static TS_StateTypeDef state = { 0 };
-  GT811_GetState(&state);
+  bool is_touch = GT811_GetState(&state);
+  if (is_touch) {
+    x = state.touchX[0];
+    y = state.touchY[0];
+    return true;
+  }
+  return false;
 }
 
 void Gt811::SetEvent() {

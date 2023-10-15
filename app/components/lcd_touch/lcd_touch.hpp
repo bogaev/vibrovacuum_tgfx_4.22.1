@@ -7,13 +7,14 @@
 
 extern "C" void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
 extern "C" void LCD_TIM_Callback();
-extern "C" HAL_StatusTypeDef LCD_TouchInit(void);
+//extern "C" HAL_StatusTypeDef LCD_TouchInit(void);
+HAL_StatusTypeDef LCD_TouchInit(void);
 
 class LcdTouch {
  public:
   HAL_StatusTypeDef Init();
   void TouchCallback();
-  void TouchCheckState();
+  bool TouchCheckState(int32_t& x, int32_t& y);
 
  private:
   TouchScreen* touch_ = nullptr;

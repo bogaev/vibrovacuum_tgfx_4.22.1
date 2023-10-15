@@ -125,7 +125,7 @@ static uint16_t GT911_ReadFirmwareVersion(void)
   return ((uint16_t)buf[1] << 8) + buf[0];
 }
 
-void GT911_Scan(void)
+bool GT911_Scan(void)
 {
   uint8_t buf[41];
   uint8_t Clearbuf = 0;
@@ -214,7 +214,9 @@ void GT911_Scan(void)
         //        BSP_LCD_DrawHLine(1, Dev_Now.Y[i], GT911_MAX_WIDTH - 1);
       }
     }
+    return true;
   }
+  return false;
 }
 
 uint16_t GT911_TEST(void)
@@ -279,8 +281,13 @@ HAL_StatusTypeDef Gt911::Init() {
   return HAL_ERROR;
 }
 
-void Gt911::CheckState() {
-  GT911_Scan();
+bool Gt911::CheckState(int32_t& x, int32_t& y) {
+  if (GT911_Scan()) {
+    x = Dev_Now.X[0];
+    y = Dev_Now.Y[0];
+    return true;
+  }
+  return false;
 }
 
 void Gt911::SetEvent() {

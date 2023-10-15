@@ -1,12 +1,7 @@
 #include "lcd_touch.hpp"
-
-#include "components/touch/gt811.h"
-#include "components/touch/gt911.h"
-
 #include "tim.h"
 
-//extern GT911_Dev Dev_Now;
-static LcdTouch screen;
+LcdTouch screen;
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
   if(GPIO_Pin == GPIO_PIN_7) {
@@ -15,7 +10,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 }
 
 void LCD_TIM_Callback() {
-  screen.TouchCheckState();
+//  screen.TouchCheckState();
 }
 
 HAL_StatusTypeDef LCD_TouchInit(void) {
@@ -33,10 +28,16 @@ HAL_StatusTypeDef LcdTouch::Init() {
 }
 
 void LcdTouch::TouchCallback() {
-  if (touch_) touch_->SetEvent();
+  if (touch_) {
+    touch_->SetEvent();
+  }
 }
 
-
-void LcdTouch::TouchCheckState() {
-  if (touch_) touch_->CheckState();
+bool LcdTouch::TouchCheckState(int32_t& x, int32_t& y) {
+  if (touch_) {
+    if (touch_->CheckState(x, y)) {
+      return true;
+    }
+  }
+  return false;
 }

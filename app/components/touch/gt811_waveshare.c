@@ -142,14 +142,17 @@ static uint8_t GT811_Init(void)
   return temp;
 }
 
-void GT811_Scan(void)
+bool GT811_Scan(void)
 {
+  bool is_touch = false;
+
   uint8_t buf[34];
   uint8_t tmp,tmp2;
   uint16_t sum = 0;
   uint8_t count = 0;
-  if(GT811_Dev.Flag==0)return;
+  if(GT811_Dev.Flag==0) return is_touch;
   GT811_Dev.Flag = 0;
+  is_touch = true;
 
   while(1)
   {
@@ -231,6 +234,7 @@ void GT811_Scan(void)
   GT811_Dev.x[4]=GT811_MAX_WIDTH-(((uint16_t)buf[30]<<8)+buf[31]);
   GT811_Dev.ppr[4]=buf[32];
 #endif
+  return is_touch;
 }
 
 HAL_StatusTypeDef Gt811_WS::Init() {
@@ -240,8 +244,13 @@ HAL_StatusTypeDef Gt811_WS::Init() {
   return HAL_ERROR;
 }
 
-void Gt811_WS::CheckState() {
-  GT811_Scan();
+bool Gt811_WS::CheckState(int32_t& x, int32_t& y) {
+  if (GT811_Scan()) {
+    x = GT811_Dev.x[0];
+    y = GT811_Dev.y[0];
+    return true;
+  }
+  return false;
 }
 
 void Gt811_WS::SetEvent() {

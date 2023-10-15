@@ -42,17 +42,14 @@ typedef struct
 GT911_Dev;
 
 uint16_t GT911_TEST(void);
-void GT911_Init(void);
-void GT911_Scan(void);
+//void GT911_Init(void);
+//void GT911_Scan(void);
 
 class Gt911 : public TouchScreen {
  public:
    HAL_StatusTypeDef Init() override;
-   void CheckState() override;
+   bool CheckState(int32_t& x, int32_t& y) override;
    void SetEvent() override;
-   Coord GetCoordinates() override {
-     return{};
-   }
 };
 
 #endif /*__GT911_H_*/

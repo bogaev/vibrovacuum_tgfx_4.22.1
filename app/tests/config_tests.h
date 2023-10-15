@@ -5,7 +5,7 @@
 //#define SDRAM_TEST_ON
 //#define FLASH_TEST_ON
 //#define DMA2D_TEST_ON
-#define TOUCH_TEST_ON
+//#define TOUCH_TEST_ON
 
 #ifdef LTDC_TEST_ON
   #include "ltdc_tests.h"

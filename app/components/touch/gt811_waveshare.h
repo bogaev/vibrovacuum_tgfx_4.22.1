@@ -41,11 +41,8 @@ extern GT811_Device 	GT811_Dev;
 class Gt811_WS : public TouchScreen {
  public:
    HAL_StatusTypeDef Init() override;
-   void CheckState() override;
+   bool CheckState(int32_t& x, int32_t& y) override;
    void SetEvent() override;
-   Coord GetCoordinates() override {
-     return{};
-   }
 };
 
 
