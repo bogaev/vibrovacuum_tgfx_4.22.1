@@ -57,9 +57,12 @@ volatile int diff = 0;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern ADC_HandleTypeDef hadc1;
 extern DMA2D_HandleTypeDef hdma2d;
 extern LTDC_HandleTypeDef hltdc;
+extern TIM_HandleTypeDef htim4;
 extern TIM_HandleTypeDef htim11;
+extern TIM_HandleTypeDef htim14;
 extern TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN EV */
@@ -165,6 +168,20 @@ void DebugMon_Handler(void)
 /******************************************************************************/
 
 /**
+  * @brief This function handles ADC1, ADC2 and ADC3 global interrupts.
+  */
+void ADC_IRQHandler(void)
+{
+  /* USER CODE BEGIN ADC_IRQn 0 */
+
+  /* USER CODE END ADC_IRQn 0 */
+  HAL_ADC_IRQHandler(&hadc1);
+  /* USER CODE BEGIN ADC_IRQn 1 */
+
+  /* USER CODE END ADC_IRQn 1 */
+}
+
+/**
   * @brief This function handles EXTI line[9:5] interrupts.
   */
 void EXTI9_5_IRQHandler(void)
@@ -190,6 +207,34 @@ void TIM1_TRG_COM_TIM11_IRQHandler(void)
   /* USER CODE BEGIN TIM1_TRG_COM_TIM11_IRQn 1 */
   LCD_TIM_Callback();
   /* USER CODE END TIM1_TRG_COM_TIM11_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM4 global interrupt.
+  */
+void TIM4_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM4_IRQn 0 */
+
+  /* USER CODE END TIM4_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim4);
+  /* USER CODE BEGIN TIM4_IRQn 1 */
+
+  /* USER CODE END TIM4_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM8 trigger and commutation interrupts and TIM14 global interrupt.
+  */
+void TIM8_TRG_COM_TIM14_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 0 */
+
+  /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim14);
+  /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 1 */
+
+  /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 1 */
 }
 
 /**

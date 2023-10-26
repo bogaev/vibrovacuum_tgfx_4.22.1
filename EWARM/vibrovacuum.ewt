@@ -1429,6 +1429,36 @@
     <group>
         <name>app</name>
         <group>
+            <name>backend</name>
+            <group>
+                <name>pressure_sensor</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\devices\pressure_sensor\pressure_sensor_controller.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\devices\pressure_sensor\pressure_sensor_controller.hpp</name>
+                </file>
+            </group>
+            <group>
+                <name>pump</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\devices\pump\pump_controller.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\devices\pump\pump_controller.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\devices\pump\pump_states.hpp</name>
+                </file>
+            </group>
+            <file>
+                <name>$PROJ_DIR$\..\app\backend\api.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\backend\api.hpp</name>
+            </file>
+        </group>
+        <group>
             <name>components</name>
             <group>
                 <name>flash</name>
@@ -1504,6 +1534,33 @@
             </group>
         </group>
         <group>
+            <name>periphery_drivers</name>
+            <group>
+                <name>adc</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\periphery_drivers\adc\adc_controller.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\periphery_drivers\adc\adc_controller.hpp</name>
+                </file>
+            </group>
+            <group>
+                <name>interrupt_manager</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\periphery_drivers\interrupt_manager\interrupt_manager.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\periphery_drivers\interrupt_manager\interrupt_manager.hpp</name>
+                </file>
+            </group>
+            <group>
+                <name>pwm</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\periphery_drivers\pwm\pwm_controller.hpp</name>
+                </file>
+            </group>
+        </group>
+        <group>
             <name>tests</name>
             <file>
                 <name>$PROJ_DIR$\..\app\tests\config_tests.h</name>
@@ -1539,6 +1596,21 @@
                 <name>$PROJ_DIR$\..\app\tests\sdram_tests.h</name>
             </file>
         </group>
+        <group>
+            <name>utility</name>
+            <file>
+                <name>$PROJ_DIR$\..\app\utility\software_pwm.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\utility\software_pwm.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\utility\timer_facility.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\utility\timer_facility.hpp</name>
+            </file>
+        </group>
     </group>
     <group>
         <name>Application</name>
@@ -1552,6 +1624,9 @@
             <name>User</name>
             <group>
                 <name>Core</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\adc.c</name>
+                </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\crc.c</name>
                 </file>
@@ -1642,6 +1717,12 @@
             <name>STM32F7xx_HAL_Driver</name>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_adc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_adc_ex.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_cortex.c</name>

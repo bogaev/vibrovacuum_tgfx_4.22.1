@@ -11,20 +11,22 @@
 
 Model::Model() :
   modelListener(0)
-#ifdef DISCONNECTED_BACKEND
-{}
-#else
+//#ifdef DISCONNECTED_BACKEND
+//{}
+//#else
   , backend_(Backend::GetInstance())
 {
-  sdata_.resize(3);
-  backend_->AddSerializedClass(this);
+//  sdata_.resize(3);
+//  backend_->AddSerializedClass(this);
   backend_->Start();
-  backend_->Coil().SetExpireTimerHandler(this, &Model::OnCoilTimerExpired);
+//  backend_->Coil().SetExpireTimerHandler(this, &Model::OnCoilTimerExpired);
+#ifndef DISCONNECTED_PUMP
   backend_->Pump().SetExpireTimerHandler(this, &Model::OnPumpTimerExpired);
-  backend_->Miostim().SetExpireTimerHandler(this, &Model::OnMiostimTimerExpired);
-  Deserialize();
-}
 #endif
+//  backend_->Miostim().SetExpireTimerHandler(this, &Model::OnMiostimTimerExpired);
+//  Deserialize();
+}
+//#endif
 
 void Model::tick()
 {
@@ -48,24 +50,24 @@ bool Model::GetElectrostimCheck() {
 
 void Model::SetVacuumCheck(bool state) {
 //  backend_->Pump().SetPumpState(state);
-#ifndef DISCONNECTED_BACKEND
   is_vacuum_on_ = state;
+#ifndef NO_SERIALIZATION
   Serialize(0, (uint16_t) is_vacuum_on_);
 #endif
 }
 
 void Model::SetVibrationCheck(bool state) {
 //  backend_->Coil().SetState(state);
-#ifndef DISCONNECTED_BACKEND
   is_vibration_on_ = state;
+#ifndef NO_SERIALIZATION
   Serialize(1, (uint16_t) is_vibration_on_);
 #endif
 }
 
 void Model::SetElectrostimCheck(bool state) {
 //  backend_->Miostim().SetState(state);
-#ifndef DISCONNECTED_BACKEND
   is_electrostim_on_ = state;
+#ifndef NO_SERIALIZATION
   Serialize(2, (uint16_t) is_electrostim_on_);
 #endif
 }
@@ -81,7 +83,7 @@ void Model::OnCoilTimerExpired() {
 }
 
 void Model::OnPumpTimerExpired() {
-#ifndef DISCONNECTED_BACKEND
+#ifndef DISCONNECTED_PUMP
   modelListener->OnPumpTimerExpired();
   is_vacuum_expired_ = true;
   if (IsTotalStateExpired()) {
@@ -90,7 +92,8 @@ void Model::OnPumpTimerExpired() {
 #endif
 }
 
-void Model::OnMiostimTimerExpired() {
+void Model::OnMiostimTimerExpired()
+{
 #ifndef DISCONNECTED_BACKEND
   modelListener->OnMiostimTimerExpired();
   is_electrostim_expired_ = true;
@@ -100,24 +103,21 @@ void Model::OnMiostimTimerExpired() {
 #endif
 }
 
-void Model::OnButtonStart(bool state) {
-#ifndef DISCONNECTED_BACKEND
+void Model::OnButtonStart(bool state)
+{
   if (state) {
     is_vacuum_expired_ = !GetVacuumCheck();
-    #ifndef DISCONNECTED_BACKEND
-    #else
+    #ifndef DISCONNECTED_PUMP
 //        backend_->Pump().Run();
         backend_->Pump().SetPumpState(is_vacuum_on_);
     #endif
     is_vibration_expired_ = !GetVibrationCheck();
     #ifndef DISCONNECTED_BACKEND
-    #else
 //        backend_->Coil().Run();
         backend_->Coil().SetState(is_vibration_on_);
     #endif
     is_electrostim_expired_ = !GetElectrostimCheck();
     #ifndef DISCONNECTED_BACKEND
-    #else
 //        backend_->Miostim().Run();
         backend_->Miostim().SetState(is_electrostim_on_);
     #endif
@@ -128,9 +128,10 @@ void Model::OnButtonStart(bool state) {
     is_vacuum_expired_ = true;
     is_vibration_expired_ = true;
     is_electrostim_expired_ = true;
+    #ifndef DISCONNECTED_PUMP
+    backend_->Pump().Stop();
+    #endif
     #ifndef DISCONNECTED_BACKEND
-    #else
-        backend_->Pump().Stop();
         backend_->Coil().Stop();
         backend_->Miostim().Stop();
 //        backend_->Pump().SetPumpState(false);
@@ -139,46 +140,51 @@ void Model::OnButtonStart(bool state) {
     #endif
     modelListener->OnAllTimersExpired();
   }
+}
+
+TimersStats Model::GetExpiryTimeMS()
+{
+//  #ifdef DISCONNECTED_BACKEND
+//    return {};
+//  #else
+#ifndef DISCONNECTED_PUMP
+      uint32_t vaco = backend_->Pump().GetTimerExpiryMS();
+      return std::make_tuple(std::make_pair(is_vacuum_expired_, vaco),
+                             std::make_pair(is_vibration_expired_, 0),
+                             std::make_pair(is_electrostim_expired_, 0));
+#else
+      uint32_t vibro = backend_->Coil().GetTimerExpiryMS();
+      uint32_t electro = backend_->Miostim().GetTimerExpiryMS();
 #endif
 }
 
-TimersStats Model::GetExpiryTimeMS() {
-  #ifdef DISCONNECTED_BACKEND
-    return {};
-  #else
-      uint32_t vaco = backend_->Pump().GetTimerExpiryMS();
-      uint32_t vibro = backend_->Coil().GetTimerExpiryMS();
-      uint32_t electro = backend_->Miostim().GetTimerExpiryMS();
-      return std::make_tuple(std::make_pair(is_vacuum_expired_, vaco),
-                             std::make_pair(is_vibration_expired_, vibro),
-                             std::make_pair(is_electrostim_expired_, electro));
-  #endif
-}
-
-bool Model::IsTotalStateExpired() {
+bool Model::IsTotalStateExpired()
+{
 #ifndef DISCONNECTED_BACKEND
-  if (is_vacuum_expired_ && is_vibration_expired_ && is_electrostim_expired_) {
+  if (is_vacuum_expired_ && is_vibration_expired_ && is_electrostim_expired_)
+  {
     return true;
   }
   return false;
 #endif
 }
 
-#ifndef DISCONNECTED_BACKEND
-std::vector<Model::StoredData>& Model::GetSerializedData() {
+#ifndef NO_SERIALIZATION
+std::vector<Model::StoredData>& Model::GetSerializedData()
+{
   return sdata_;
 }
-#endif
 
-#ifndef DISCONNECTED_BACKEND
-void Model::Serialize(uint16_t idx, uint16_t data) {
+void Model::Serialize(uint16_t idx, uint16_t data)
+{
   sdata_[idx].value = data;
   if (flash_) {
     flash_->StoreToFlash(sdata_[idx]);
   }
 }
 
-void Model::Deserialize() {
+void Model::Deserialize()
+{
   if (flash_) {
     flash_->LoadFromFlash(sdata_);
   }

@@ -3,11 +3,11 @@
 
 LcdTouch screen;
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-  if(GPIO_Pin == GPIO_PIN_7) {
-    screen.TouchCallback();
-  }
-}
+//void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+//  if(GPIO_Pin == GPIO_PIN_7) {
+//    screen.TouchCallback();
+//  }
+//}
 
 void LCD_TIM_Callback() {
 //  screen.TouchCheckState();

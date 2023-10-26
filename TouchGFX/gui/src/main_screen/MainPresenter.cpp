@@ -18,22 +18,26 @@ void MainPresenter::deactivate()
 
 void MainPresenter::updateTimer(uint16_t seconds)
 {
-    //view.setTimer(seconds);
+  //view.setTimer(seconds);
 }
 
-bool MainPresenter::GetVacuumCheck() {
+bool MainPresenter::GetVacuumCheck()
+{
   return model->GetVacuumCheck();
 }
 
-bool MainPresenter::GetVibrationCheck() {
+bool MainPresenter::GetVibrationCheck()
+{
   return model->GetVibrationCheck();
 }
 
-bool MainPresenter::GetElectrostimCheck() {
+bool MainPresenter::GetElectrostimCheck()
+{
   return model->GetElectrostimCheck();
 }
 
-bool MainPresenter::GetVibrationState() {
+bool MainPresenter::GetVibrationState()
+{
 #ifndef DISCONNECTED_BACKEND
   return model->GetBackend().Coil().GetState();
 #endif
@@ -59,10 +63,12 @@ void MainPresenter::OnButtonStart(bool state)
   model->OnButtonStart(state);
 }
 
-void MainPresenter::OnAllTimersExpired() {
+void MainPresenter::OnAllTimersExpired()
+{
   view.OnAllTimersExpired();
 }
 
-TimersStats MainPresenter::GetExpiryTimeMS() {
+TimersStats MainPresenter::GetExpiryTimeMS()
+{
   return model->GetExpiryTimeMS();
 }

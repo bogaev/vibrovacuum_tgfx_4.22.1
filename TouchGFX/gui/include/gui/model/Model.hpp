@@ -3,10 +3,13 @@
 
 #include <stdint.h>
 
-#ifdef DISCONNECTED_BACKEND
+//#ifdef DISCONNECTED_BACKEND
 //#include <common_\common.h>
-#else
-#include "system/backend.hpp"
+//#else
+#include "backend/api.hpp"
+//#endif
+
+#ifndef NO_SERIALIZATION
 #include "mcu_periphery\flash\flash.hpp"
 #endif
 
@@ -47,15 +50,17 @@ public:
 
   TimersStats GetExpiryTimeMS();
 
-#ifndef DISCONNECTED_BACKEND
+#ifndef NO_SERIALIZATION
   std::vector<StoredData>& GetSerializedData() override;
   void Serialize(uint16_t idx, uint16_t data) override;
   void Deserialize() override;
+#endif
 
+//#ifndef DISCONNECTED_BACKEND
   Backend& GetBackend() {
     return *backend_;
   }
-#endif
+//#endif
 
 protected:
   ModelListener* modelListener;
@@ -69,7 +74,7 @@ private:
   bool is_vibration_expired_ = true;
   bool is_electrostim_expired_ = true;
 
-#ifndef DISCONNECTED_BACKEND
+//#ifndef DISCONNECTED_BACKEND
   bool is_backend_started_ = false;
   Backend* backend_ = nullptr;
 
@@ -80,7 +85,7 @@ private:
       is_backend_started_ = true;
     }
   }
-#endif
+//#endif
 
   void OnCoilTimerExpired();
   void OnPumpTimerExpired();

@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define LCD_BCK_LGHT_Pin GPIO_PIN_3
 #define LCD_BCK_LGHT_GPIO_Port GPIOA
+#define PRESSURE_SENS_Pin GPIO_PIN_4
+#define PRESSURE_SENS_GPIO_Port GPIOA
 #define LED2_Pin GPIO_PIN_13
 #define LED2_GPIO_Port GPIOB
 #define LCD_RST_Pin GPIO_PIN_11
@@ -68,6 +70,12 @@ void Error_Handler(void);
 #define LCD_INTRPT_Pin GPIO_PIN_7
 #define LCD_INTRPT_GPIO_Port GPIOD
 #define LCD_INTRPT_EXTI_IRQn EXTI9_5_IRQn
+#define PUMP_PWM_Pin GPIO_PIN_7
+#define PUMP_PWM_GPIO_Port GPIOB
+#define PUMP_RES1_Pin GPIO_PIN_8
+#define PUMP_RES1_GPIO_Port GPIOB
+#define PUMP_RES2_Pin GPIO_PIN_9
+#define PUMP_RES2_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
