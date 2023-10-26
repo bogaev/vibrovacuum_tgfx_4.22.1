@@ -142,29 +142,17 @@
     <Filter Include="Source Files\gui\model">
       <UniqueIdentifier>027E8124-E457-DED8-8918-151D4839A7B3</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen_screen">
-      <UniqueIdentifier>CDCC7D46-A127-F779-0560-48734540153B</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\generated\gui_generated">
       <UniqueIdentifier>3D7D3ADE-9344-DA0F-FAF4-6ACD304BE702</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\gui\common">
       <UniqueIdentifier>648164C8-5550-01EA-42B5-B2DD638CE6A0</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen_screen">
-      <UniqueIdentifier>B528E595-12BF-9F22-F646-788342743854</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\generated\gui_generated">
       <UniqueIdentifier>1D25B4CA-CDF4-BF34-0AF0-FB8AB337DFAC</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\gui\common">
       <UniqueIdentifier>5524713A-7F64-8A2D-007F-1618EDE08355</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen_screen">
-      <UniqueIdentifier>3B9B188E-572F-9B1A-E978-475819261B8E</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen_screen">
-      <UniqueIdentifier>460A1CD2-41CD-B6F8-35A5-C371F12F7863</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\generated\simulator\include">
       <UniqueIdentifier>EC0E36E6-88F8-929A-F42D-57F2E73BF606</UniqueIdentifier>
@@ -183,6 +171,78 @@
     </Filter>
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>59A8C7F7-DE3B-235D-D261-352E2F0FD4BA</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\vibration_screen">
+      <UniqueIdentifier>217AA924-F127-E7C5-768E-80D345715732</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\electrostim2_screen">
+      <UniqueIdentifier>55374BC7-C888-E01B-850B-E6B141BAD87C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\containers">
+      <UniqueIdentifier>202F215F-4BCB-6C0E-5DD8-021375D5469F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\containers">
+      <UniqueIdentifier>67B3E65C-A3F3-0A11-3DB1-5CF9F2090EED</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\electrostim2_screen">
+      <UniqueIdentifier>5E0EA3C2-C9B4-FDB2-2390-7F55972621C3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\vibration_screen">
+      <UniqueIdentifier>88CD96DE-A59A-29B0-441E-E5CDDB84CFC0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\electrostim1_screen">
+      <UniqueIdentifier>B249A41F-2835-D464-8EF8-00920225E4D2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\main_screen">
+      <UniqueIdentifier>4E06C5CD-6176-019C-A92E-830238730445</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\main_screen">
+      <UniqueIdentifier>FA223236-DD5A-3930-919D-B9AB42230499</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\vacuum_screen">
+      <UniqueIdentifier>CDDDA461-EEA2-B2AD-37DB-D5591B1C54FD</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\electrostim1_screen">
+      <UniqueIdentifier>9225C12E-D453-7F7B-8C3A-3D1222FC493F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\vacuum_screen">
+      <UniqueIdentifier>E5458307-7228-D47B-772F-72C4EA726B9C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\containers">
+      <UniqueIdentifier>DD90FF88-8E25-7F1D-613B-D222EC6690E9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\electrostim1_screen">
+      <UniqueIdentifier>6F151BC0-A94F-7775-369A-5F1116F9A9C3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\vacuum_screen">
+      <UniqueIdentifier>B3A42083-CC61-0EC1-2753-009F4394749F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\containers">
+      <UniqueIdentifier>89F3B501-BCB7-3E95-3D7C-2A2B4E12A359</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\electrostim1_screen">
+      <UniqueIdentifier>9C7F1C23-DD87-B7A5-0087-92970AAE5FB2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\vacuum_screen">
+      <UniqueIdentifier>E2896B1C-BDD4-48C5-A406-A77E1C9580CA</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\electrostim2_screen">
+      <UniqueIdentifier>C6849A8B-429A-E114-6E17-91246B880124</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\main_screen">
+      <UniqueIdentifier>EA9E9C89-0700-DB95-31C9-04113F37C348</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\main_screen">
+      <UniqueIdentifier>947EFEF2-B7CC-0944-D599-C438E6DBB2F7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\electrostim2_screen">
+      <UniqueIdentifier>DA9BE0CB-29A4-5327-BBA0-9EA9DDCF6823</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\vibration_screen">
+      <UniqueIdentifier>018EBA74-81C5-29B2-2E36-1B5454E6CE4F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\vibration_screen">
+      <UniqueIdentifier>C0475F2E-DD06-45FD-28B7-9EB93F6E4BFB</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -213,17 +273,74 @@
     <ClCompile Include="..\..\gui\src\model\Model.cpp">
       <Filter>Source Files\gui\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenPresenter.cpp">
-      <Filter>Source Files\gui\screen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenView.cpp">
-      <Filter>Source Files\gui\screen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen_screen\screenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen_screen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\electrostim1_screen\Electrostim1Presenter.cpp">
+      <Filter>Source Files\gui\electrostim1_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\electrostim1_screen\Electrostim1View.cpp">
+      <Filter>Source Files\gui\electrostim1_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\electrostim1_screen\Electrostim1ViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\electrostim1_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\electrostim2_screen\Electrostim2Presenter.cpp">
+      <Filter>Source Files\gui\electrostim2_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\electrostim2_screen\Electrostim2View.cpp">
+      <Filter>Source Files\gui\electrostim2_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\electrostim2_screen\Electrostim2ViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\electrostim2_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\common\GuiUtilities.cpp">
+      <Filter>Source Files\gui\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\main_screen\MainPresenter.cpp">
+      <Filter>Source Files\gui\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\main_screen\MainView.cpp">
+      <Filter>Source Files\gui\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\main_screen\MainViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\NonclickableZone256Container.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\NonclickableZone256ContainerBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\NonclickableZone900Container.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\NonclickableZone900ContainerBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\NonclickableZoneContainer.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\NonclickableZoneContainerBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\vacuum_screen\VacuumPresenter.cpp">
+      <Filter>Source Files\gui\vacuum_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\vacuum_screen\VacuumView.cpp">
+      <Filter>Source Files\gui\vacuum_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\vacuum_screen\VacuumViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\vacuum_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\vibration_screen\VibrationPresenter.cpp">
+      <Filter>Source Files\gui\vibration_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\vibration_screen\VibrationView.cpp">
+      <Filter>Source Files\gui\vibration_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\vibration_screen\VibrationViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\vibration_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -661,20 +778,77 @@
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp">
       <Filter>Header Files\gui\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenPresenter.hpp">
-      <Filter>Header Files\gui\screen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenView.hpp">
-      <Filter>Header Files\gui\screen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_screen\screenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\electrostim1_screen\Electrostim1Presenter.hpp">
+      <Filter>Header Files\gui\electrostim1_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\electrostim1_screen\Electrostim1View.hpp">
+      <Filter>Header Files\gui\electrostim1_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\electrostim1_screen\Electrostim1ViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\electrostim1_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\electrostim2_screen\Electrostim2Presenter.hpp">
+      <Filter>Header Files\gui\electrostim2_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\electrostim2_screen\Electrostim2View.hpp">
+      <Filter>Header Files\gui\electrostim2_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\electrostim2_screen\Electrostim2ViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\electrostim2_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\GuiUtilities.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainPresenter.hpp">
+      <Filter>Header Files\gui\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainView.hpp">
+      <Filter>Header Files\gui\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\main_screen\MainViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\NonclickableZone256Container.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\NonclickableZone256ContainerBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\NonclickableZone900Container.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\NonclickableZone900ContainerBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\NonclickableZoneContainer.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\NonclickableZoneContainerBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\vacuum_screen\VacuumPresenter.hpp">
+      <Filter>Header Files\gui\vacuum_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\vacuum_screen\VacuumView.hpp">
+      <Filter>Header Files\gui\vacuum_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\vacuum_screen\VacuumViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\vacuum_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\vibration_screen\VibrationPresenter.hpp">
+      <Filter>Header Files\gui\vibration_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\vibration_screen\VibrationView.hpp">
+      <Filter>Header Files\gui\vibration_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\vibration_screen\VibrationViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\vibration_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

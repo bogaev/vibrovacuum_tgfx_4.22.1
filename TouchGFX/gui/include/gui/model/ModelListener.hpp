@@ -14,6 +14,12 @@ public:
     {
         model = m;
     }
+    
+    virtual void OnCoilTimerExpired() {};
+    virtual void OnPumpTimerExpired() {};
+    virtual void OnMiostimTimerExpired() {};
+    virtual void OnAllTimersExpired() {};
+
 protected:
     Model* model;
 };

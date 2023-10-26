@@ -18,7 +18,9 @@ public:
         model.tick();
         FrontendApplicationBase::handleTickEvent();
     }
+
 private:
+
 };
 
 #endif // FRONTENDAPPLICATION_HPP

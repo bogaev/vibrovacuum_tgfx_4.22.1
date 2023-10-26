@@ -2,46 +2,1780 @@
   "Application": {
     "Screens": [
       {
-        "Name": "screen",
+        "Name": "Main",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 1024,
+            "Height": 600,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonElectrostim",
+            "X": 705,
+            "Y": 60,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 13,
+                "Y": 190,
+                "TextId": "__SingleUse_5GY0",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle",
+                "X": 117,
+                "Y": 16,
+                "IconReleased": "electricity-therapy.png",
+                "IconPressed": "electricity-therapy.png"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle_gr.png",
+                "ImagePressed": "Rectangle_gr.png"
+              }
+            ]
+          },
+          {
+            "Type": "Image",
+            "Name": "arrow3",
+            "X": 935,
+            "Y": 269,
+            "Width": 24,
+            "Height": 24,
+            "RelativeFilename": "right-arrow-angle.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonVibration",
+            "X": 389,
+            "Y": 60,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 15,
+                "Y": 190,
+                "TextId": "__SingleUse_AVLU",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle",
+                "X": 120,
+                "Y": 16,
+                "IconReleased": "jackhammer.png",
+                "IconPressed": "jackhammer.png"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-ros.png",
+                "ImagePressed": "Rectangle-ros.png"
+              }
+            ]
+          },
+          {
+            "Type": "Image",
+            "Name": "arrow4",
+            "X": 567,
+            "Y": 269,
+            "Width": 24,
+            "Height": 24,
+            "RelativeFilename": "right-arrow-angle.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonVacuum",
+            "X": 62,
+            "Y": 60,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 15,
+                "Y": 190,
+                "TextId": "__SingleUse_L4EA",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle",
+                "X": 120,
+                "Y": 18,
+                "IconReleased": "vacuum-cleaner-bk.png",
+                "IconPressed": "vacuum-cleaner-bk.png"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-purple.png",
+                "ImagePressed": "Rectangle-purple.png"
+              }
+            ]
+          },
+          {
+            "Type": "Image",
+            "Name": "arrow2",
+            "X": 202,
+            "Y": 269,
+            "Width": 24,
+            "Height": 24,
+            "RelativeFilename": "right-arrow-angle.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonCheckStim",
+            "X": 833,
+            "Y": 345,
+            "Width": 128,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ToggleButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_WS52",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank-128.png",
+                "ImagePressed": "Rectangle-green-128.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonCheckVibration",
+            "X": 517,
+            "Y": 345,
+            "Width": 128,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ToggleButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_2IIP",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank-128.png",
+                "ImagePressed": "Rectangle-green-128.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonCheckVacuum",
+            "X": 190,
+            "Y": 345,
+            "Width": 128,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ToggleButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_OX4C",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank-128.png",
+                "ImagePressed": "Rectangle-green-128.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonStart",
+            "X": 62,
+            "Y": 480,
+            "Width": 900,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ToggleButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_18SD",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-900-blank.png",
+                "ImagePressed": "Rectangle-900-green.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textExpTimeVacuum",
+            "X": 94,
+            "Y": 353,
+            "Width": 96,
+            "Height": 80,
+            "TextId": "__SingleUse_QUZO",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_6O3K",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textExpTimeVibro",
+            "X": 421,
+            "Y": 353,
+            "Width": 96,
+            "Height": 80,
+            "TextId": "__SingleUse_K6RW",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_XMO6",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textExpTimeElectrostim",
+            "X": 737,
+            "Y": 353,
+            "Width": 96,
+            "Height": 80,
+            "TextId": "__SingleUse_E0GU",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_O0JU",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "imageTimerVaco",
+            "X": 30,
+            "Y": 361,
+            "Width": 64,
+            "Height": 64,
+            "RelativeFilename": "stopwatch_64.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "imageTimerVibro",
+            "X": 357,
+            "Y": 361,
+            "Width": 64,
+            "Height": 64,
+            "RelativeFilename": "stopwatch_64.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "imageTimerElectro",
+            "X": 673,
+            "Y": 361,
+            "Width": 64,
+            "Height": 64,
+            "RelativeFilename": "stopwatch_64.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "InteractionGotoVacuum",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonVacuum"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Vacuum"
+            }
+          },
+          {
+            "InteractionName": "InteractionGotoVibration",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonVibration"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Vibration"
+            }
+          },
+          {
+            "InteractionName": "InteractionButtonStartClick",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonStart"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonStartClick"
+            }
+          },
+          {
+            "InteractionName": "InteractionGoToElectrostim",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonElectrostim"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Electrostim1"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnVacuumButtonCheck",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonCheckVacuum"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnVacuumButtonCheck"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnVibrationButtonCheck",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonCheckVibration"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnVibrationButtonCheck"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnStimulButtonCheck",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonCheckStim"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnStimulButtonCheck"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnButtonStart",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonStart"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnButtonStart"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Vacuum",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 1024,
+            "Height": 600,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonTime",
+            "X": 628,
+            "Y": 138,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 20,
+                "Y": 190,
+                "TextId": "__SingleUse_S8I3",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-purple.png",
+                "ImagePressed": "Rectangle-purple.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textVacuumTimeValue",
+            "X": 650,
+            "Y": 193,
+            "Width": 216,
+            "Height": 73,
+            "TextId": "__SingleUse_K1IY",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_PCNP",
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nonclickableTime",
+            "X": 628,
+            "Y": 138,
+            "Width": 256,
+            "Height": 256,
+            "CustomContainerDefinitionName": "NonclickableZone256Container",
+            "Clickable": true
+          },
+          {
+            "Type": "Slider",
+            "Name": "sliderAmplitude",
+            "X": 320,
+            "Y": 164,
+            "Width": 40,
+            "Height": 193,
+            "BackgroundUnselected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "BackgroundSelected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "Indicator": "__designer\\Dark_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_Edge_nob.png",
+            "IndicatorPos": 3,
+            "IndicatorMax": 134,
+            "IndicatorMin": 5,
+            "ValueMax": 100
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonVacuum",
+            "X": 64,
+            "Y": 132,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 20,
+                "Y": 190,
+                "TextId": "__SingleUse_0L3S",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-purple.png",
+                "ImagePressed": "Rectangle-purple.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textVacuumValue",
+            "X": 179,
+            "Y": 187,
+            "Width": 110,
+            "Height": 73,
+            "TextId": "__SingleUse_L4M3",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_B0T2",
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nonclickableVacuum",
+            "X": 64,
+            "Y": 132,
+            "Width": 256,
+            "Height": 256,
+            "CustomContainerDefinitionName": "NonclickableZone256Container",
+            "Clickable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "title",
+            "X": 64,
+            "Y": -177,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 20,
+                "Y": 190,
+                "TextId": "__SingleUse_YHH7",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-purple.png",
+                "ImagePressed": "Rectangle-purple.png"
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nonclickableZoneTitle",
+            "X": 64,
+            "Y": -177,
+            "Width": 256,
+            "Height": 256,
+            "CustomContainerDefinitionName": "NonclickableZone256Container",
+            "Clickable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonTest",
+            "X": 668,
+            "Y": 469,
+            "Width": 256,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ToggleButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_OG3I",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank.png",
+                "ImagePressed": "Rectanlge-green.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonBack",
+            "X": 104,
+            "Y": 469,
+            "Width": 256,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_GL3D",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank.png",
+                "ImagePressed": "Rectangle-blank.png"
+              }
+            ]
+          },
+          {
+            "Type": "Slider",
+            "Name": "sliderTime",
+            "X": 884,
+            "Y": 164,
+            "Width": 40,
+            "Height": 193,
+            "BackgroundUnselected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "BackgroundSelected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "Indicator": "__designer\\Dark_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_Edge_nob.png",
+            "IndicatorPos": 3,
+            "IndicatorMax": 134,
+            "IndicatorMin": 5,
+            "ValueMax": 60
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "InteractionGotoMain",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonBack"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnAmplitudeChange",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "sliderAmplitude"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnAmplitudeChange"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnVacuumTest",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonTest"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnVacuumTest"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnButtonBack",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonBack"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnButtonBack"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnTimeChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "sliderTime"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnTimeChanged"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Vibration",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 1024,
+            "Height": 600,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Slider",
+            "Name": "sliderFrequency",
+            "X": 621,
+            "Y": 162,
+            "Width": 40,
+            "Height": 193,
+            "BackgroundUnselected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "BackgroundSelected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "Indicator": "__designer\\Dark_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_Edge_nob.png",
+            "IndicatorPos": 3,
+            "IndicatorMax": 134,
+            "IndicatorMin": 5,
+            "ValueMax": 10,
+            "ValueMin": 1,
+            "InitValue": 1
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonFrequency",
+            "X": 365,
+            "Y": 132,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 20,
+                "Y": 190,
+                "TextId": "__SingleUse_2BL2",
+                "TextRotation": "0",
+                "ColorPressed": {
+                  "Red": 199,
+                  "Green": 199,
+                  "Blue": 199
+                }
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-ros.png",
+                "ImagePressed": "Rectangle-ros.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textFrequencyValue",
+            "X": 470,
+            "Y": 187,
+            "Width": 120,
+            "Height": 73,
+            "TextId": "__SingleUse_TCYG",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_W5MY",
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nonclickableZoneFrequency",
+            "X": 365,
+            "Y": 132,
+            "Width": 256,
+            "Height": 256,
+            "CustomContainerDefinitionName": "NonclickableZone256Container",
+            "Clickable": true
+          },
+          {
+            "Type": "Slider",
+            "Name": "sliderIntensity",
+            "X": 293,
+            "Y": 164,
+            "Width": 40,
+            "Height": 193,
+            "BackgroundUnselected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "BackgroundSelected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "Indicator": "__designer\\Dark_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_Edge_nob.png",
+            "IndicatorPos": 3,
+            "IndicatorMax": 134,
+            "IndicatorMin": 5,
+            "ValueMax": 100
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonIntensity",
+            "X": 37,
+            "Y": 132,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 20,
+                "Y": 190,
+                "TextId": "__SingleUse_JDHC",
+                "TextRotation": "0",
+                "ColorPressed": {
+                  "Red": 199,
+                  "Green": 199,
+                  "Blue": 199
+                }
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-ros.png",
+                "ImagePressed": "Rectangle-ros.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textIntensityValue",
+            "X": 156,
+            "Y": 187,
+            "Width": 106,
+            "Height": 73,
+            "TextId": "__SingleUse_MZB7",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_0QUC",
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nonclickableZoneIntensity",
+            "X": 37,
+            "Y": 132,
+            "Width": 256,
+            "Height": 256,
+            "CustomContainerDefinitionName": "NonclickableZone256Container",
+            "Clickable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "title",
+            "X": 37,
+            "Y": -177,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 20,
+                "Y": 190,
+                "TextId": "__SingleUse_NCSO",
+                "TextRotation": "0",
+                "ColorPressed": {
+                  "Red": 199,
+                  "Green": 199,
+                  "Blue": 199
+                }
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-ros.png",
+                "ImagePressed": "Rectangle-ros.png"
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nonclickableZoneTitle",
+            "X": 37,
+            "Y": -177,
+            "Width": 256,
+            "Height": 256,
+            "CustomContainerDefinitionName": "NonclickableZone256Container",
+            "Clickable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonTest",
+            "X": 732,
+            "Y": 469,
+            "Width": 256,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ToggleButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_4WZ4",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank.png",
+                "ImagePressed": "Rectanlge-green.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonBack",
+            "X": 77,
+            "Y": 469,
+            "Width": 256,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_8IFQ",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank.png",
+                "ImagePressed": "Rectangle-blank.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonTime",
+            "X": 692,
+            "Y": 132,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 20,
+                "Y": 190,
+                "TextId": "__SingleUse_JIOQ",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-ros.png",
+                "ImagePressed": "Rectangle-ros.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textVibrationTimeValue",
+            "X": 732,
+            "Y": 187,
+            "Width": 205,
+            "Height": 73,
+            "TextId": "__SingleUse_8KQQ",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_TNK0",
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nonclickableTime",
+            "X": 692,
+            "Y": 132,
+            "Width": 256,
+            "Height": 256,
+            "CustomContainerDefinitionName": "NonclickableZone256Container",
+            "Clickable": true
+          },
+          {
+            "Type": "Slider",
+            "Name": "sliderTime",
+            "X": 948,
+            "Y": 158,
+            "Width": 40,
+            "Height": 193,
+            "BackgroundUnselected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "BackgroundSelected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "Indicator": "__designer\\Dark_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_Edge_nob.png",
+            "IndicatorPos": 3,
+            "IndicatorMax": 134,
+            "IndicatorMin": 5,
+            "ValueMax": 60
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "InteractionGotoMain",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonBack"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnFrequencyChange",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "sliderFrequency"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnFrequencyChange"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnIntensityChange",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "sliderIntensity"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnIntensityChange"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnVibrationTest",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonTest"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnVibrationTest"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnButtonBack",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonBack"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnButtonBack"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnTimeChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "sliderTime"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnTimeChanged"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Electrostim1",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 1024,
+            "Height": 600,
+            "LockPosition": true,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "bgModRatio",
+            "X": 448,
+            "Y": 332,
+            "Width": 512,
+            "Height": 144,
+            "RelativeFilename": "Rectangle_green.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textValueModRatio",
+            "X": 838,
+            "Y": 406,
+            "Width": 110,
+            "Height": 53,
+            "TextId": "__SingleUse_XS4M",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_04PJ",
+              "UseBuffer": true,
+              "BufferSize": 4
+            },
+            "Wildcard2": {
+              "TextId": "__SingleUse_J5TI",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "Slider",
+            "Name": "sliderModRatio",
+            "X": 479,
+            "Y": 414,
+            "Width": 352,
+            "Height": 41,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\Dark_Slider_Horizontal_Medium_Slider2_Round_Edge_fill.png",
+            "BackgroundSelected": "__designer\\Dark_Slider_Horizontal_Medium_Slider2_Round_Edge_fill.png",
+            "Indicator": "__designer\\Dark_Slider_Horizontal_Medium_Indicators_Slider2_Round_Edge_nob.png",
+            "IndicatorPos": 4,
+            "IndicatorMax": 294,
+            "IndicatorMin": 4,
+            "ValueMax": 2
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textModRatio",
+            "X": 479,
+            "Y": 345,
+            "Width": 303,
+            "Height": 53,
+            "TextId": "__SingleUse_IRMC",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "bgDepth",
+            "X": 448,
+            "Y": 177,
+            "Width": 512,
+            "Height": 144,
+            "RelativeFilename": "Rectangle_green.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textValueModDepth",
+            "X": 838,
+            "Y": 249,
+            "Width": 106,
+            "Height": 53,
+            "TextId": "__SingleUse_CV8V",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_R8XX",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "Slider",
+            "Name": "sliderModDepth",
+            "X": 479,
+            "Y": 258,
+            "Width": 352,
+            "Height": 41,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\Dark_Slider_Horizontal_Medium_Slider2_Round_Edge_fill.png",
+            "BackgroundSelected": "__designer\\Dark_Slider_Horizontal_Medium_Slider2_Round_Edge_fill.png",
+            "Indicator": "__designer\\Dark_Slider_Horizontal_Medium_Indicators_Slider2_Round_Edge_nob.png",
+            "IndicatorPos": 4,
+            "IndicatorMax": 294,
+            "IndicatorMin": 4,
+            "ValueMax": 4
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textModDepth",
+            "X": 479,
+            "Y": 189,
+            "Width": 319,
+            "Height": 53,
+            "TextId": "__SingleUse_S8YJ",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "bgFreq",
+            "X": 448,
+            "Y": 23,
+            "Width": 512,
+            "Height": 144,
+            "RelativeFilename": "Rectangle_green.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textValueFreq",
+            "X": 838,
+            "Y": 96,
+            "Width": 106,
+            "Height": 49,
+            "TextId": "__SingleUse_OOTK",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_56LY",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "Slider",
+            "Name": "sliderModulationFreq",
+            "X": 479,
+            "Y": 104,
+            "Width": 352,
+            "Height": 41,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\Dark_Slider_Horizontal_Medium_Slider2_Round_Edge_fill.png",
+            "BackgroundSelected": "__designer\\Dark_Slider_Horizontal_Medium_Slider2_Round_Edge_fill.png",
+            "Indicator": "__designer\\Dark_Slider_Horizontal_Medium_Indicators_Slider2_Round_Edge_nob.png",
+            "IndicatorPos": 4,
+            "IndicatorMax": 294,
+            "IndicatorMin": 4,
+            "ValueMax": 6
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textModulationFreq",
+            "X": 479,
+            "Y": 36,
+            "Width": 322,
+            "Height": 53,
+            "TextId": "__SingleUse_287P",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Slider",
+            "Name": "sliderPattern",
+            "X": 320,
+            "Y": 168,
+            "Width": 40,
+            "Height": 193,
+            "BackgroundUnselected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "BackgroundSelected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "Indicator": "__designer\\Dark_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_Edge_nob.png",
+            "IndicatorPos": 3,
+            "IndicatorMax": 134,
+            "IndicatorMin": 5,
+            "ValueMax": 5,
+            "ValueMin": 1,
+            "InitValue": 1
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonPattern",
+            "X": 64,
+            "Y": 136,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 15,
+                "Y": 190,
+                "TextId": "__SingleUse_HJEK",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle_gr.png",
+                "ImagePressed": "Rectangle_gr.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textPattern",
+            "X": 209,
+            "Y": 191,
+            "Width": 89,
+            "Height": 73,
+            "TextId": "__SingleUse_JY2G",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_FAHW",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nonclickable",
+            "X": 64,
+            "Y": 136,
+            "Width": 256,
+            "Height": 256,
+            "CustomContainerDefinitionName": "NonclickableZone256Container",
+            "Clickable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonToTimer",
+            "X": 703,
+            "Y": 484,
+            "Width": 256,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_SNNH",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank.png",
+                "ImagePressed": "Rectangle-blank.png"
+              }
+            ]
+          },
+          {
+            "Type": "Image",
+            "Name": "arrow",
+            "X": 854,
+            "Y": 508,
+            "Width": 24,
+            "Height": 24,
+            "RelativeFilename": "right-arrow-angle.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonBack",
+            "X": 104,
+            "Y": 484,
+            "Width": 256,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_Y98D",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank.png",
+                "ImagePressed": "Rectangle-blank.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "title",
+            "X": 64,
+            "Y": -177,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 15,
+                "Y": 190,
+                "TextId": "__SingleUse_K2LZ",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle_gr.png",
+                "ImagePressed": "Rectangle_gr.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "InteractionGotoMain",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonBack"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnPatternChange",
+            "Trigger": {
+              "Type": "TriggerSliderValueConfirmed",
+              "TriggerComponent": "sliderPattern"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnPatternChange"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnModFreqChange",
+            "Trigger": {
+              "Type": "TriggerSliderValueConfirmed",
+              "TriggerComponent": "sliderModulationFreq"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnModFreqChange"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnModDepthChange",
+            "Trigger": {
+              "Type": "TriggerSliderValueConfirmed",
+              "TriggerComponent": "sliderModDepth"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnModDepthChange"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnModRatioChange",
+            "Trigger": {
+              "Type": "TriggerSliderValueConfirmed",
+              "TriggerComponent": "sliderModRatio"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnModRatioChange"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnButtonBack",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonBack"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnButtonBack"
+            }
+          },
+          {
+            "InteractionName": "InteractionChangeScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonToTimer"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Electrostim2"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Electrostim2",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 1024,
+            "Height": 600,
+            "LockPosition": true,
+            "Color": {
+              "Red": 240,
+              "Green": 240,
+              "Blue": 240
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonTest",
+            "X": 704,
+            "Y": 484,
+            "Width": 256,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ToggleButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_8O84",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank.png",
+                "ImagePressed": "Rectanlge-green.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonTime",
+            "X": 64,
+            "Y": 136,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 20,
+                "Y": 190,
+                "TextId": "__SingleUse_5M9K",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle_gr.png",
+                "ImagePressed": "Rectangle_gr.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textElectrostimTimeValue",
+            "X": 116,
+            "Y": 191,
+            "Width": 185,
+            "Height": 73,
+            "TextId": "__SingleUse_JCG8",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_J4UD",
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "nonclickableTime",
+            "X": 64,
+            "Y": 136,
+            "Width": 256,
+            "Height": 256,
+            "CustomContainerDefinitionName": "NonclickableZone256Container",
+            "Clickable": true
+          },
+          {
+            "Type": "Slider",
+            "Name": "sliderTime",
+            "X": 320,
+            "Y": 168,
+            "Width": 40,
+            "Height": 193,
+            "BackgroundUnselected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "BackgroundSelected": "__designer\\Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.png",
+            "Indicator": "__designer\\Dark_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_Edge_nob.png",
+            "IndicatorPos": 3,
+            "IndicatorMax": 134,
+            "IndicatorMin": 5,
+            "ValueMax": 60
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "title",
+            "X": 64,
+            "Y": -177,
+            "Width": 256,
+            "Height": 256,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 15,
+                "Y": 190,
+                "TextId": "__SingleUse_F4WC",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle_gr.png",
+                "ImagePressed": "Rectangle_gr.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonBack",
+            "X": 104,
+            "Y": 484,
+            "Width": 256,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 18,
+                "Y": 9,
+                "TextId": "__SingleUse_JWJI",
+                "TextRotation": "0"
+              },
+              {
+                "Type": "IconButtonStyle"
+              },
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "Rectangle-blank.png",
+                "ImagePressed": "Rectangle-blank.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "InteractionOnElectrostimTest",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonTest"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnElectrostimTest"
+            }
+          },
+          {
+            "InteractionName": "InteractionOnTimeChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "sliderTime"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "OnTimeChanged"
+            }
+          },
+          {
+            "InteractionName": "InteractionChangeScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonBack"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Electrostim1"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "NonclickableZoneContainer",
+        "Width": 256,
+        "Height": 40,
+        "Components": [],
+        "Interactions": []
+      },
+      {
+        "Name": "NonclickableZone256Container",
+        "Width": 256,
+        "Height": 256,
         "Components": [
           {
             "Type": "TiledImage",
-            "Name": "tiledImage1",
-            "Width": 1024,
-            "Height": 600,
-            "FileName": "__generated\\alternate_theme_images_textures_seamless_texture_1.png"
-          },
+            "Name": "tiledImage",
+            "Width": 256,
+            "Height": 256,
+            "FileName": "__designer\\Dark_Textures_vertical_cloth.png",
+            "Alpha": 0
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "NonclickableZone900Container",
+        "Width": 900,
+        "Height": 382,
+        "Components": [
           {
-            "Type": "Button",
-            "Name": "button1",
-            "X": 247,
-            "Y": 212,
-            "Width": 240,
-            "Height": 50,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
-            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+            "Type": "TiledImage",
+            "Name": "bg",
+            "Width": 900,
+            "Height": 382,
+            "FileName": "__designer\\Dark_Textures_tweed.png",
+            "Alpha": 128
           }
         ],
         "Interactions": []
       }
     ],
-    "CustomContainerDefinitions": [],
     "Name": "MyApplication",
     "Resolution": {
       "Width": 1024,
       "Height": 600
     },
-    "SelectedColorDepth": 32,
-    "StartupScreenName": "screen",
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Main",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
     "AvailableColorDepths": [
-      32
+      16
     ],
     "AvailableLCDs": {
-      "32": "LCD32bpp"
+      "32": "LCD32bpp",
+      "16": "LCD16bpp"
     },
     "AvailableSections": [
       "ExtFlashSection",
@@ -55,8 +1789,8 @@
     ],
     "PhysicalButtons": [],
     "FrameworkFeatures": {
-      "LCD32bpp": {
-        "Id": "LCD32bpp",
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
         "IsEnabled": true
       }
     },
@@ -77,7 +1811,9 @@
     "ProjectFile": "../vibrovacuum.ioc",
     "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
     "OptionalComponents": [],
-    "AdditionalFeatures": []
+    "AdditionalFeatures": [
+      "Vector"
+    ]
   },
   "Version": "4.22.1"
 }

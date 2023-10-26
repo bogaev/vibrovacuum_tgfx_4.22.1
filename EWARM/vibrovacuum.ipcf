@@ -11,48 +11,108 @@
     </includePath>
     <asmIncludePath></asmIncludePath>
     <defines>
-        <define>USE_BPP=32</define>
+        <define>USE_BPP=16</define>
     </defines>
     <asmDefines></asmDefines>
     <files>
         <group name="gui">
             <group name="common">
                 <path>$PROJ_DIR$/../TouchGFX/gui/src/common/FrontendApplication.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/common/GuiUtilities.cpp</path>
+            </group>
+            <group name="containers">
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/containers/NonclickableZone256Container.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/containers/NonclickableZone900Container.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/containers/NonclickableZoneContainer.cpp</path>
+            </group>
+            <group name="electrostim1_screen">
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/electrostim1_screen/Electrostim1Presenter.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/electrostim1_screen/Electrostim1View.cpp</path>
+            </group>
+            <group name="electrostim2_screen">
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/electrostim2_screen/Electrostim2Presenter.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/electrostim2_screen/Electrostim2View.cpp</path>
+            </group>
+            <group name="main_screen">
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/main_screen/MainPresenter.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/main_screen/MainView.cpp</path>
             </group>
             <group name="model">
                 <path>$PROJ_DIR$/../TouchGFX/gui/src/model/Model.cpp</path>
             </group>
-            <group name="screen_screen">
-                <path>$PROJ_DIR$/../TouchGFX/gui/src/screen_screen/screenPresenter.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/gui/src/screen_screen/screenView.cpp</path>
+            <group name="vacuum_screen">
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/vacuum_screen/VacuumPresenter.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/vacuum_screen/VacuumView.cpp</path>
+            </group>
+            <group name="vibration_screen">
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/vibration_screen/VibrationPresenter.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/gui/src/vibration_screen/VibrationView.cpp</path>
             </group>
         </group>
         <group name="generated">
             <group name="fonts">
                 <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/CachedFont.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Font_verdana_10_4bpp_0.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Font_verdana_20_4bpp_0.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Font_verdana_40_4bpp_0.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Font_RobotoCondensed_Regular_10_4bpp_0.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Font_RobotoCondensed_Regular_20_4bpp_0.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Font_RobotoCondensed_Regular_30_4bpp_0.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Font_RobotoCondensed_Regular_40_4bpp_0.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Font_RobotoCondensed_Regular_60_4bpp_0.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/FontCache.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/GeneratedFont.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Kerning_verdana_20_4bpp.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Kerning_verdana_40_4bpp.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Table_verdana_20_4bpp.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Table_verdana_40_4bpp.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Kerning_RobotoCondensed_Regular_10_4bpp.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Kerning_RobotoCondensed_Regular_20_4bpp.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Kerning_RobotoCondensed_Regular_30_4bpp.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Kerning_RobotoCondensed_Regular_40_4bpp.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Kerning_RobotoCondensed_Regular_60_4bpp.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Table_RobotoCondensed_Regular_10_4bpp.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Table_RobotoCondensed_Regular_20_4bpp.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Table_RobotoCondensed_Regular_30_4bpp.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Table_RobotoCondensed_Regular_40_4bpp.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/Table_RobotoCondensed_Regular_60_4bpp.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/fonts/src/UnmappedDataFont.cpp</path>
             </group>
             <group name="gui_generated">
                 <path>$PROJ_DIR$/../TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/gui_generated/src/screen_screen/screenViewBase.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/gui_generated/src/containers/NonclickableZone256ContainerBase.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/gui_generated/src/containers/NonclickableZone900ContainerBase.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/gui_generated/src/containers/NonclickableZoneContainerBase.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/gui_generated/src/electrostim1_screen/Electrostim1ViewBase.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/gui_generated/src/electrostim2_screen/Electrostim2ViewBase.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/gui_generated/src/main_screen/MainViewBase.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/gui_generated/src/vacuum_screen/VacuumViewBase.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/gui_generated/src/vibration_screen/VibrationViewBase.cpp</path>
             </group>
             <group name="images">
-                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__generated/image_alternate_theme_images_textures_seamless_texture_1.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__designer/image_Dark_Slider_Horizontal_Medium_Indicators_Slider2_Round_Edge_nob.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__designer/image_Dark_Slider_Horizontal_Medium_Slider2_Round_Edge_fill.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__designer/image_Dark_Slider_Vertical_Small_Indicators_Slider3_Vertical_Round_Edge_nob.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__designer/image_Dark_Slider_Vertical_Small_Slider3_Vertical_Round_Edge_fill.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__designer/image_Dark_Textures_tweed.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__designer/image_Dark_Textures_vertical_cloth.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/images/src/BitmapDatabase.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_arrow_down.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_arrow_up.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_button_invisible_256.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_dottedLineH.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_dottedLineV.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_electricity-therapy.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_icon_stop.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_jackhammer.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectangle-900-blank.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectangle-900-green.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectangle-blank-128.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectangle-blank.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectangle-green-128.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectangle-purple.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectangle-ros.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectangle_gr.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectangle_green.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectanlge-green-128.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_Rectanlge-green.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_right-arrow-angle.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_stopwatch_64.cpp</path>
+                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_vacuum-cleaner-bk.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/images/src/SVGDatabase.cpp</path>
             </group>
             <group name="texts">

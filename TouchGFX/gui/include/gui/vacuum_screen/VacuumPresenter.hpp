@@ -1,17 +1,17 @@
-#ifndef SCREENPRESENTER_HPP
-#define SCREENPRESENTER_HPP
+#ifndef VACUUMPRESENTER_HPP
+#define VACUUMPRESENTER_HPP
 
 #include <gui/model/ModelListener.hpp>
 #include <mvp/Presenter.hpp>
 
 using namespace touchgfx;
 
-class screenView;
+class VacuumView;
 
-class screenPresenter : public touchgfx::Presenter, public ModelListener
+class VacuumPresenter : public touchgfx::Presenter, public ModelListener
 {
 public:
-    screenPresenter(screenView& v);
+    VacuumPresenter(VacuumView& v);
 
     /**
      * The activate function is called automatically when this screen is "switched in"
@@ -25,12 +25,21 @@ public:
      */
     virtual void deactivate();
 
-    virtual ~screenPresenter() {}
+    virtual ~VacuumPresenter() {};
+
+    void SetVacuum(int value);
+    int GetVacuum();
+    int GetTimerMinutes();
+    
+    void OnVacuumTest(bool state);
+    void OnButtonBack();
+    void OnTimeChanged(int value);
+    void OnPumpTimerExpired() override;
 
 private:
-    screenPresenter();
+    VacuumPresenter();
 
-    screenView& view;
+    VacuumView& view;
 };
 
-#endif // SCREENPRESENTER_HPP
+#endif // VACUUMPRESENTER_HPP

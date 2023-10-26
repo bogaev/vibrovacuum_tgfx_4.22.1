@@ -20,10 +20,29 @@
     <ClCompile Include="..\..\gui\src\common\FrontendApplication.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp"/>
     <ClCompile Include="..\..\gui\src\model\Model.cpp"/>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen_screen\screenViewBase.cpp"/>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp"/>
+    <ClCompile Include="..\..\gui\src\electrostim1_screen\Electrostim1Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\electrostim1_screen\Electrostim1View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\electrostim1_screen\Electrostim1ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\electrostim2_screen\Electrostim2Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\electrostim2_screen\Electrostim2View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\electrostim2_screen\Electrostim2ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\common\GuiUtilities.cpp"/>
+    <ClCompile Include="..\..\gui\src\main_screen\MainPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\main_screen\MainView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\main_screen\MainViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\NonclickableZone256Container.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\NonclickableZone256ContainerBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\NonclickableZone900Container.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\NonclickableZone900ContainerBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\NonclickableZoneContainer.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\NonclickableZoneContainerBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\vacuum_screen\VacuumPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\vacuum_screen\VacuumView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\vacuum_screen\VacuumViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\vibration_screen\VibrationPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\vibration_screen\VibrationView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\vibration_screen\VibrationViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -172,11 +191,30 @@
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\MJPEGDecoder.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\Model.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_screen\screenViewBase.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\electrostim1_screen\Electrostim1Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\electrostim1_screen\Electrostim1View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\electrostim1_screen\Electrostim1ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\electrostim2_screen\Electrostim2Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\electrostim2_screen\Electrostim2View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\electrostim2_screen\Electrostim2ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\common\GuiUtilities.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\main_screen\MainViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\NonclickableZone256Container.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\NonclickableZone256ContainerBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\NonclickableZone900Container.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\NonclickableZone900ContainerBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\NonclickableZoneContainer.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\NonclickableZoneContainerBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\vacuum_screen\VacuumPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\vacuum_screen\VacuumView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\vacuum_screen\VacuumViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\vibration_screen\VibrationPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\vibration_screen\VibrationView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\vibration_screen\VibrationViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

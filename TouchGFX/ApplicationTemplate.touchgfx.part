@@ -3,10 +3,10 @@
   "Application": {
     "Name": "vibrovacuum",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
-    "AvailableColorDepths": [ 32 ],
+    "AvailableColorDepths": [ 16 ],
     "AvailableLCDs":
     {
-      "32": "LCD32bpp"
+      "16": "LCD16bpp"
     },
     "AvailableResolutions": [
       {
@@ -24,6 +24,7 @@
     "OptionalComponents": [
     ],
     "AdditionalFeatures": [
+      "Vector"
     ]
   },
   "Version": "4.22.1"

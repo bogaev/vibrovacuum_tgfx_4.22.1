@@ -20,7 +20,7 @@
 #include <fonts/ApplicationFontProvider.hpp>
 #include <gui/common/FrontendHeap.hpp>
 #include <BitmapDatabase.hpp>
-#include <platform/driver/lcd/LCD32bpp.hpp>
+#include <platform/driver/lcd/LCD16bpp.hpp>
 #include <touchgfx/hal/OSWrappers.hpp>
 #include <STM32DMA.hpp>
 #include <TouchGFXHAL.hpp>
@@ -33,7 +33,7 @@ extern "C" void touchgfx_components_init();
 
 static STM32TouchController tc;
 static STM32DMA dma;
-static LCD32bpp display;
+static LCD16bpp display;
 static ApplicationFontProvider fontProvider;
 static Texts texts;
 static TouchGFXHAL hal(dma, display, tc, 1024, 600);
