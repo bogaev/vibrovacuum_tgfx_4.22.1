@@ -1940,12 +1940,6 @@
                     <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\image_arrow_down.cpp</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\image_arrow_up.cpp</name>
-                </file>
-                <file>
                     <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\image_button_invisible_256.cpp</name>
                 </file>
                 <file>

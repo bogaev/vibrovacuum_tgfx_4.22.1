@@ -4,354 +4,77 @@
     <Language Id="GB" />
   </Languages>
   <Texts>
-    <TextGroup Id="Group1">
-      <Text Id="__SingleUse_QF3V" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Подготовка к работе</Translation>
-      </Text>
-      <Text Id="__SingleUse_J9OL" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Проведение сессии</Translation>
-      </Text>
-      <Text Id="__SingleUse_YXWN" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Завершение работы</Translation>
-      </Text>
-      <Text Id="__SingleUse_NIXG" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Подготовка к работе</Translation>
-      </Text>
-      <Text Id="__SingleUse_CEMT" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Проведение сессии</Translation>
-      </Text>
-      <Text Id="__SingleUse_HDXM" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Завершение работы</Translation>
-      </Text>
-      <Text Id="__SingleUse_TVTI" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">1</Translation>
-      </Text>
-      <Text Id="__SingleUse_OPZC" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">2</Translation>
-      </Text>
-      <Text Id="__SingleUse_KYMN" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">3</Translation>
-      </Text>
-      <Text Id="__SingleUse_UP4I" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">4</Translation>
-      </Text>
-      <Text Id="__SingleUse_2Q0U" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Подготовка к работе</Translation>
-      </Text>
-      <Text Id="__SingleUse_J53G" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Проведение сессии</Translation>
-      </Text>
-      <Text Id="__SingleUse_CX24" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Завершение работы</Translation>
-      </Text>
-      <Text Id="__SingleUse_QWN6" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Подготовка к работе</Translation>
-      </Text>
-      <Text Id="__SingleUse_84VY" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Проведение сессии</Translation>
-      </Text>
-      <Text Id="__SingleUse_HW28" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Отмена</Translation>
-      </Text>
-      <Text Id="__SingleUse_C4BZ" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Нет</Translation>
-      </Text>
-      <Text Id="__SingleUse_8FXK" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Да</Translation>
-      </Text>
-      <Text Id="__SingleUse_A2HQ" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Сохранить сессию&#10;перед выходом?</Translation>
-      </Text>
-      <Text Id="__SingleUse_JNLL" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Скрыть</Translation>
-      </Text>
-      <Text Id="__SingleUse_1HF2" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Отмена</Translation>
-      </Text>
-      <Text Id="__SingleUse_AQFN" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Нет</Translation>
-      </Text>
-      <Text Id="__SingleUse_H9UA" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Да</Translation>
-      </Text>
-      <Text Id="__SingleUse_BR77" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Сохранить сессию&#10;перед выходом?</Translation>
-      </Text>
-      <Text Id="__SingleUse_97XE" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Нет</Translation>
-      </Text>
-      <Text Id="__SingleUse_85M1" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Да</Translation>
-      </Text>
-      <Text Id="__SingleUse_K8EX" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Вы действительно&#10;хотите остановить&#10;сессию?</Translation>
-      </Text>
-      <Text Id="__SingleUse_GTFI" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Нет</Translation>
-      </Text>
-      <Text Id="__SingleUse_IDNV" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Да</Translation>
-      </Text>
-      <Text Id="__SingleUse_6YKK" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Вы действительно&#10;хотите остановить&#10;сессию?</Translation>
-      </Text>
-      <Text Id="__SingleUse_LU8F" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Нет</Translation>
-      </Text>
-      <Text Id="__SingleUse_5KZ3" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Да</Translation>
-      </Text>
-      <Text Id="__SingleUse_9SU8" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Вы действительно&#10;хотите остановить&#10;сессию?</Translation>
-      </Text>
-      <Text Id="EnteredText" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">&lt;placeholder&gt;</Translation>
-      </Text>
-      <Text Id="NumMode" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB" Alignment="Center">ABC</Translation>
-      </Text>
-      <Text Id="AlphaMode" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB" Alignment="Center">123</Translation>
-      </Text>
-      <Text Id="CapsLock" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB" Alignment="Center">Caps Lock</Translation>
-      </Text>
-      <Text Id="Backspace" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB" Alignment="Center">Backspace</Translation>
-      </Text>
-      <Text Id="__SingleUse_L4EA" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Вакуум</Translation>
-      </Text>
-      <Text Id="__SingleUse_AVLU" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Вибрация</Translation>
-      </Text>
-      <Text Id="__SingleUse_Z40M" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Нет</Translation>
-      </Text>
-      <Text Id="__SingleUse_23S1" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Да</Translation>
-      </Text>
-      <Text Id="__SingleUse_WI94" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Вы действительно&#10;хотите перейти?</Translation>
-      </Text>
-      <Text Id="__SingleUse_L4M3" Alignment="Right" TypographyId="Huge">
-        <Translation Language="GB">&lt;value&gt;%</Translation>
-      </Text>
-      <Text Id="__SingleUse_B0T2" Alignment="Left" TypographyId="Huge">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_5PH9" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Нет</Translation>
-      </Text>
-      <Text Id="__SingleUse_IBMD" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Да</Translation>
-      </Text>
-      <Text Id="__SingleUse_9E37" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Вы действительно&#10;хотите перейти?</Translation>
-      </Text>
-      <Text Id="__SingleUse_459M" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Нет</Translation>
-      </Text>
-      <Text Id="__SingleUse_FOCK" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Да</Translation>
-      </Text>
-      <Text Id="__SingleUse_Q7XP" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Вы действительно&#10;хотите перейти?</Translation>
-      </Text>
-      <Text Id="__SingleUse_MI0L" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Таймер</Translation>
-      </Text>
-      <Text Id="__SingleUse_57YV" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Вибрация</Translation>
-      </Text>
-      <Text Id="__SingleUse_KPQX" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Вакуум</Translation>
-      </Text>
-      <Text Id="__SingleUse_39EK" Alignment="Center" TypographyId="Medium">
-        <Translation Language="GB">Остановка сессии</Translation>
-      </Text>
-      <Text Id="__SingleUse_U6QN" Alignment="Center" TypographyId="Medium">
-        <Translation Language="GB">Запуск сессии</Translation>
-      </Text>
-      <Text Id="__SingleUse_2Y0U" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Таймер</Translation>
-      </Text>
-      <Text Id="__SingleUse_P7TU" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Вибрация</Translation>
-      </Text>
-      <Text Id="__SingleUse_NLZQ" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Вакуум</Translation>
-      </Text>
-      <Text Id="__SingleUse_ESG2" Alignment="Center" TypographyId="Medium">
-        <Translation Language="GB">Остановка сессии</Translation>
-      </Text>
-      <Text Id="__SingleUse_0BIG" Alignment="Center" TypographyId="Medium">
-        <Translation Language="GB">Запуск сессии</Translation>
-      </Text>
-      <Text Id="__SingleUse_NCSO" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Вибрация</Translation>
-      </Text>
-      <Text Id="__SingleUse_JDHC" Alignment="Left" TypographyId="Large">
+    <TextGroup Id="Single">
+      <Text Id="TitleIntensity" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">Интенс-ть</Translation>
       </Text>
-      <Text Id="__SingleUse_MZB7" Alignment="Right" TypographyId="Huge">
-        <Translation Language="GB">&lt;value&gt;%</Translation>
-      </Text>
-      <Text Id="__SingleUse_0QUC" Alignment="Left" TypographyId="Huge">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_2BL2" Alignment="Left" TypographyId="Large">
+      <Text Id="TitleFreq" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">Частота</Translation>
       </Text>
-      <Text Id="__SingleUse_TCYG" Alignment="Right" TypographyId="Huge">
+      <Text Id="VibroRate" Alignment="Right" TypographyId="Huge">
         <Translation Language="GB">&lt;value&gt; Гц</Translation>
       </Text>
-      <Text Id="__SingleUse_W5MY" Alignment="Left" TypographyId="Huge">
-        <Translation Language="GB">1</Translation>
-      </Text>
-      <Text Id="__SingleUse_0L3S" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Вакуум</Translation>
-      </Text>
-      <Text Id="__SingleUse_YHH7" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Вакуум</Translation>
-      </Text>
-      <Text Id="__SingleUse_2ML9" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Таймер</Translation>
-      </Text>
-      <Text Id="__SingleUse_WBA4" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Минуты</Translation>
-      </Text>
-      <Text Id="__SingleUse_ODQ3" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Назад</Translation>
-      </Text>
-      <Text Id="__SingleUse_5GY0" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Электростим</Translation>
-      </Text>
-      <Text Id="__SingleUse_OG3I" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Тест</Translation>
-      </Text>
-      <Text Id="__SingleUse_GL3D" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Назад</Translation>
-      </Text>
-      <Text Id="__SingleUse_8IFQ" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Назад</Translation>
-      </Text>
-      <Text Id="__SingleUse_4WZ4" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Тест</Translation>
-      </Text>
-      <Text Id="__SingleUse_WS52" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Вкл.</Translation>
-      </Text>
-      <Text Id="__SingleUse_2IIP" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Вкл.</Translation>
-      </Text>
-      <Text Id="__SingleUse_OX4C" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Вкл.</Translation>
-      </Text>
-      <Text Id="__SingleUse_18SD" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Старт</Translation>
-      </Text>
-      <Text Id="__SingleUse_S8I3" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Время эксп.</Translation>
-      </Text>
-      <Text Id="__SingleUse_K1IY" Alignment="Right" TypographyId="Huge">
-        <Translation Language="GB">&lt;value&gt; мин.</Translation>
-      </Text>
-      <Text Id="__SingleUse_PCNP" Alignment="Left" TypographyId="Huge">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_8KQQ" Alignment="Right" TypographyId="Huge">
-        <Translation Language="GB">&lt;value&gt; мин.</Translation>
-      </Text>
-      <Text Id="__SingleUse_TNK0" Alignment="Left" TypographyId="Huge">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_JIOQ" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Время эксп.</Translation>
-      </Text>
-      <Text Id="__SingleUse_8O84" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Тест</Translation>
-      </Text>
-      <Text Id="__SingleUse_5M9K" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Время эксп.</Translation>
-      </Text>
-      <Text Id="__SingleUse_JCG8" Alignment="Right" TypographyId="Huge">
-        <Translation Language="GB">&lt;value&gt; мин.</Translation>
-      </Text>
-      <Text Id="__SingleUse_J4UD" Alignment="Left" TypographyId="Huge">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_F4WC" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Электростим.</Translation>
-      </Text>
-      <Text Id="__SingleUse_XS4M" Alignment="Left" TypographyId="Large">
+      <Text Id="Ratio" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">&lt;ratio1&gt; : &lt;ratio2&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_04PJ" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">1</Translation>
-      </Text>
-      <Text Id="__SingleUse_J5TI" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">1</Translation>
-      </Text>
-      <Text Id="__SingleUse_IRMC" Alignment="Left" TypographyId="Large">
+      <Text Id="TitlePattern" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">Длит. серий / пауз</Translation>
       </Text>
-      <Text Id="__SingleUse_CV8V" Alignment="Left" TypographyId="Large">
+      <Text Id="ModDepth" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">&lt;value&gt;%</Translation>
       </Text>
-      <Text Id="__SingleUse_R8XX" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_S8YJ" Alignment="Left" TypographyId="Large">
+      <Text Id="TitleModDepth" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">Глубина модуляции</Translation>
       </Text>
-      <Text Id="__SingleUse_OOTK" Alignment="Left" TypographyId="Large">
+      <Text Id="ModRate" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">&lt;value&gt; Гц</Translation>
       </Text>
-      <Text Id="__SingleUse_56LY" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_287P" Alignment="Left" TypographyId="Large">
+      <Text Id="TitleModRate" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">Частота модуляции</Translation>
       </Text>
-      <Text Id="__SingleUse_JY2G" Alignment="Center" TypographyId="Huge">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_FAHW" Alignment="Left" TypographyId="Huge">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_HJEK" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Электростим.</Translation>
-      </Text>
-      <Text Id="__SingleUse_Y98D" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Назад</Translation>
-      </Text>
-      <Text Id="__SingleUse_K2LZ" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Электростим.</Translation>
-      </Text>
-      <Text Id="__SingleUse_SNNH" Alignment="Left" TypographyId="Large">
+      <Text Id="Timer" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">Таймер</Translation>
       </Text>
-      <Text Id="__SingleUse_JWJI" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Назад</Translation>
-      </Text>
-      <Text Id="__SingleUse_QUZO" Alignment="Center" TypographyId="Huge">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_6O3K" Alignment="Left" TypographyId="Huge">
+    </TextGroup>
+    <TextGroup Id="ButtonTitles">
+      <Text Id="Null" Alignment="Left" TypographyId="Huge">
         <Translation Language="GB">0</Translation>
       </Text>
-      <Text Id="__SingleUse_K6RW" Alignment="Center" TypographyId="Huge">
+      <Text Id="One" Alignment="Left" TypographyId="Huge">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="HugeValue" Alignment="Center" TypographyId="Huge">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_XMO6" Alignment="Left" TypographyId="Huge">
-        <Translation Language="GB">0</Translation>
+      <Text Id="Percent" Alignment="Left" TypographyId="Huge">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
       </Text>
-      <Text Id="__SingleUse_E0GU" Alignment="Center" TypographyId="Huge">
-        <Translation Language="GB">&lt;value&gt;</Translation>
+      <Text Id="ExposureTime" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Время эксп.</Translation>
       </Text>
-      <Text Id="__SingleUse_O0JU" Alignment="Left" TypographyId="Huge">
-        <Translation Language="GB">0</Translation>
+      <Text Id="Minutes" Alignment="Left" TypographyId="Huge">
+        <Translation Language="GB" Alignment="Left">&lt;value&gt; мин.</Translation>
+      </Text>
+      <Text Id="TitleOn" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB" Alignment="Left">Вкл</Translation>
+      </Text>
+      <Text Id="TitleBack" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB" Alignment="Left">Назад</Translation>
+      </Text>
+      <Text Id="TitleStart" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB" Alignment="Left">Старт</Translation>
+      </Text>
+      <Text Id="TitleTest" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB" Alignment="Left">Тест</Translation>
+      </Text>
+      <Text Id="TitleElectrostim" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB" Alignment="Left">Электростим</Translation>
+      </Text>
+      <Text Id="TitleVibration" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB" Alignment="Left">Вибрация</Translation>
+      </Text>
+      <Text Id="TitleVacuum" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB" Alignment="Left">Вакуум</Translation>
       </Text>
     </TextGroup>
   </Texts>

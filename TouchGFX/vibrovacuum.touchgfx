@@ -31,7 +31,7 @@
                 "Type": "TextButtonStyle",
                 "X": 13,
                 "Y": 190,
-                "TextId": "__SingleUse_5GY0",
+                "TextId": "TitleElectrostim",
                 "TextRotation": "0"
               },
               {
@@ -72,7 +72,7 @@
                 "Type": "TextButtonStyle",
                 "X": 15,
                 "Y": 190,
-                "TextId": "__SingleUse_AVLU",
+                "TextId": "TitleVibration",
                 "TextRotation": "0"
               },
               {
@@ -113,7 +113,7 @@
                 "Type": "TextButtonStyle",
                 "X": 15,
                 "Y": 190,
-                "TextId": "__SingleUse_L4EA",
+                "TextId": "TitleVacuum",
                 "TextRotation": "0"
               },
               {
@@ -154,7 +154,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_WS52",
+                "TextId": "TitleOn",
                 "TextRotation": "0"
               },
               {
@@ -182,7 +182,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_2IIP",
+                "TextId": "TitleOn",
                 "TextRotation": "0"
               },
               {
@@ -210,7 +210,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_OX4C",
+                "TextId": "TitleOn",
                 "TextRotation": "0"
               },
               {
@@ -238,7 +238,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_18SD",
+                "TextId": "TitleStart",
                 "TextRotation": "0"
               },
               {
@@ -258,10 +258,10 @@
             "Y": 353,
             "Width": 96,
             "Height": 80,
-            "TextId": "__SingleUse_QUZO",
+            "TextId": "HugeValue",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_6O3K",
+              "TextId": "Null",
               "UseBuffer": true,
               "BufferSize": 10
             }
@@ -273,10 +273,10 @@
             "Y": 353,
             "Width": 96,
             "Height": 80,
-            "TextId": "__SingleUse_K6RW",
+            "TextId": "HugeValue",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_XMO6",
+              "TextId": "Null",
               "UseBuffer": true,
               "BufferSize": 10
             }
@@ -288,10 +288,10 @@
             "Y": 353,
             "Width": 96,
             "Height": 80,
-            "TextId": "__SingleUse_E0GU",
+            "TextId": "HugeValue",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_O0JU",
+              "TextId": "Null",
               "UseBuffer": true,
               "BufferSize": 10
             }
@@ -448,7 +448,7 @@
                 "Type": "TextButtonStyle",
                 "X": 20,
                 "Y": 190,
-                "TextId": "__SingleUse_S8I3",
+                "TextId": "ExposureTime",
                 "TextRotation": "0"
               },
               {
@@ -465,10 +465,10 @@
             "Y": 193,
             "Width": 216,
             "Height": 73,
-            "TextId": "__SingleUse_K1IY",
+            "TextId": "Minutes",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_PCNP",
+              "TextId": "Null",
               "UseBuffer": true,
               "BufferSize": 3
             }
@@ -513,7 +513,7 @@
                 "Type": "TextButtonStyle",
                 "X": 20,
                 "Y": 190,
-                "TextId": "__SingleUse_0L3S",
+                "TextId": "TitleVacuum",
                 "TextRotation": "0"
               },
               {
@@ -530,10 +530,10 @@
             "Y": 187,
             "Width": 110,
             "Height": 73,
-            "TextId": "__SingleUse_L4M3",
+            "TextId": "Percent",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_B0T2",
+              "TextId": "Null",
               "UseBuffer": true,
               "BufferSize": 3
             }
@@ -563,7 +563,7 @@
                 "Type": "TextButtonStyle",
                 "X": 20,
                 "Y": 190,
-                "TextId": "__SingleUse_YHH7",
+                "TextId": "TitleVacuum",
                 "TextRotation": "0"
               },
               {
@@ -598,7 +598,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_OG3I",
+                "TextId": "TitleTest",
                 "TextRotation": "0"
               },
               {
@@ -626,7 +626,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_GL3D",
+                "TextId": "TitleBack",
                 "TextRotation": "0"
               },
               {
@@ -762,7 +762,7 @@
                 "Type": "TextButtonStyle",
                 "X": 20,
                 "Y": 190,
-                "TextId": "__SingleUse_2BL2",
+                "TextId": "TitleFreq",
                 "TextRotation": "0",
                 "ColorPressed": {
                   "Red": 199,
@@ -784,10 +784,10 @@
             "Y": 187,
             "Width": 120,
             "Height": 73,
-            "TextId": "__SingleUse_TCYG",
+            "TextId": "VibroRate",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_W5MY",
+              "TextId": "One",
               "UseBuffer": true,
               "BufferSize": 3
             }
@@ -832,7 +832,7 @@
                 "Type": "TextButtonStyle",
                 "X": 20,
                 "Y": 190,
-                "TextId": "__SingleUse_JDHC",
+                "TextId": "TitleIntensity",
                 "TextRotation": "0",
                 "ColorPressed": {
                   "Red": 199,
@@ -854,10 +854,10 @@
             "Y": 187,
             "Width": 106,
             "Height": 73,
-            "TextId": "__SingleUse_MZB7",
+            "TextId": "Percent",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_0QUC",
+              "TextId": "Null",
               "UseBuffer": true,
               "BufferSize": 3
             }
@@ -887,7 +887,7 @@
                 "Type": "TextButtonStyle",
                 "X": 20,
                 "Y": 190,
-                "TextId": "__SingleUse_NCSO",
+                "TextId": "TitleVibration",
                 "TextRotation": "0",
                 "ColorPressed": {
                   "Red": 199,
@@ -927,7 +927,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_4WZ4",
+                "TextId": "TitleTest",
                 "TextRotation": "0"
               },
               {
@@ -955,7 +955,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_8IFQ",
+                "TextId": "TitleBack",
                 "TextRotation": "0"
               },
               {
@@ -983,7 +983,7 @@
                 "Type": "TextButtonStyle",
                 "X": 20,
                 "Y": 190,
-                "TextId": "__SingleUse_JIOQ",
+                "TextId": "ExposureTime",
                 "TextRotation": "0"
               },
               {
@@ -1000,10 +1000,10 @@
             "Y": 187,
             "Width": 205,
             "Height": 73,
-            "TextId": "__SingleUse_8KQQ",
+            "TextId": "Minutes",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_TNK0",
+              "TextId": "Null",
               "UseBuffer": true,
               "BufferSize": 3
             }
@@ -1135,15 +1135,15 @@
             "Y": 406,
             "Width": 110,
             "Height": 53,
-            "TextId": "__SingleUse_XS4M",
+            "TextId": "Ratio",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_04PJ",
+              "TextId": "One",
               "UseBuffer": true,
               "BufferSize": 4
             },
             "Wildcard2": {
-              "TextId": "__SingleUse_J5TI",
+              "TextId": "One",
               "UseBuffer": true,
               "BufferSize": 4
             }
@@ -1170,8 +1170,8 @@
             "X": 479,
             "Y": 345,
             "Width": 303,
-            "Height": 53,
-            "TextId": "__SingleUse_IRMC",
+            "Height": 48,
+            "TextId": "TitlePattern",
             "TextRotation": "0",
             "AutoSize": true
           },
@@ -1191,10 +1191,10 @@
             "Y": 249,
             "Width": 106,
             "Height": 53,
-            "TextId": "__SingleUse_CV8V",
+            "TextId": "ModDepth",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_R8XX",
+              "TextId": "Null",
               "UseBuffer": true,
               "BufferSize": 5
             }
@@ -1221,8 +1221,8 @@
             "X": 479,
             "Y": 189,
             "Width": 319,
-            "Height": 53,
-            "TextId": "__SingleUse_S8YJ",
+            "Height": 48,
+            "TextId": "TitleModDepth",
             "TextRotation": "0",
             "AutoSize": true
           },
@@ -1242,10 +1242,9 @@
             "Y": 96,
             "Width": 106,
             "Height": 49,
-            "TextId": "__SingleUse_OOTK",
+            "TextId": "ModRate",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_56LY",
               "UseBuffer": true,
               "BufferSize": 5
             }
@@ -1272,8 +1271,8 @@
             "X": 479,
             "Y": 36,
             "Width": 322,
-            "Height": 53,
-            "TextId": "__SingleUse_287P",
+            "Height": 48,
+            "TextId": "TitleModRate",
             "TextRotation": "0",
             "AutoSize": true
           },
@@ -1309,7 +1308,7 @@
                 "Type": "TextButtonStyle",
                 "X": 15,
                 "Y": 190,
-                "TextId": "__SingleUse_HJEK",
+                "TextId": "TitleElectrostim",
                 "TextRotation": "0"
               },
               {
@@ -1326,10 +1325,10 @@
             "Y": 191,
             "Width": 89,
             "Height": 73,
-            "TextId": "__SingleUse_JY2G",
+            "TextId": "HugeValue",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_FAHW",
+              "TextId": "Null",
               "UseBuffer": true,
               "BufferSize": 4
             }
@@ -1359,7 +1358,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_SNNH",
+                "TextId": "Timer",
                 "TextRotation": "0"
               },
               {
@@ -1396,7 +1395,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_Y98D",
+                "TextId": "TitleBack",
                 "TextRotation": "0"
               },
               {
@@ -1424,7 +1423,7 @@
                 "Type": "TextButtonStyle",
                 "X": 15,
                 "Y": 190,
-                "TextId": "__SingleUse_K2LZ",
+                "TextId": "TitleElectrostim",
                 "TextRotation": "0"
               },
               {
@@ -1548,7 +1547,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_8O84",
+                "TextId": "TitleTest",
                 "TextRotation": "0"
               },
               {
@@ -1576,7 +1575,7 @@
                 "Type": "TextButtonStyle",
                 "X": 20,
                 "Y": 190,
-                "TextId": "__SingleUse_5M9K",
+                "TextId": "ExposureTime",
                 "TextRotation": "0"
               },
               {
@@ -1593,10 +1592,10 @@
             "Y": 191,
             "Width": 185,
             "Height": 73,
-            "TextId": "__SingleUse_JCG8",
+            "TextId": "Minutes",
             "TextRotation": "0",
             "Wildcard1": {
-              "TextId": "__SingleUse_J4UD",
+              "TextId": "Null",
               "UseBuffer": true,
               "BufferSize": 3
             }
@@ -1641,7 +1640,7 @@
                 "Type": "TextButtonStyle",
                 "X": 15,
                 "Y": 190,
-                "TextId": "__SingleUse_F4WC",
+                "TextId": "TitleElectrostim",
                 "TextRotation": "0"
               },
               {
@@ -1666,7 +1665,7 @@
                 "Type": "TextButtonStyle",
                 "X": 18,
                 "Y": 9,
-                "TextId": "__SingleUse_JWJI",
+                "TextId": "TitleBack",
                 "TextRotation": "0"
               },
               {

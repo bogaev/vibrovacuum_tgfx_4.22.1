@@ -28,7 +28,7 @@ Backend* Backend::GetInstance() {
   if(backend_ == nullptr) {
       backend_ = new Backend(
 //        coil::InitSettings {
-//          pwm::InitSettings{
+//          pwm::InitSettings {
 //            .timer = &htim5,
 //            .channel = TIM_CHANNEL_2
 //          }, // pwm_vibration

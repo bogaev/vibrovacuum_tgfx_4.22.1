@@ -91,8 +91,6 @@
                 <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__designer/image_Dark_Textures_tweed.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/images/src/__designer/image_Dark_Textures_vertical_cloth.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/images/src/BitmapDatabase.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_arrow_down.cpp</path>
-                <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_arrow_up.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_button_invisible_256.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_dottedLineH.cpp</path>
                 <path>$PROJ_DIR$/../TouchGFX/generated/images/src/image_dottedLineV.cpp</path>

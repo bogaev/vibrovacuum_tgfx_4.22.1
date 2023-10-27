@@ -1542,6 +1542,15 @@
             <group>
                 <name>Core</name>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\main.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\gpio.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\freertos.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\adc.c</name>
                 </file>
                 <file>
@@ -1554,34 +1563,25 @@
                     <name>$PROJ_DIR$\..\Core\Src\fmc.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\freertos.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\gpio.c</name>
-                </file>
-                <file>
                     <name>$PROJ_DIR$\..\Core\Src\i2c.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\ltdc.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\main.c</name>
+                    <name>$PROJ_DIR$\..\Core\Src\quadspi.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\quadspi.c</name>
+                    <name>$PROJ_DIR$\..\Core\Src\tim.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\stm32f7xx_it.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32f7xx_hal_msp.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32f7xx_hal_timebase_tim.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\stm32f7xx_it.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\tim.c</name>
                 </file>
             </group>
             <group>
@@ -1597,26 +1597,26 @@
                     <group>
                         <name>generated</name>
                         <file>
-                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\OSWrappers.cpp</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\STM32DMA.cpp</name>
-                        </file>
-                        <file>
                             <name>$PROJ_DIR$\..\TouchGFX\target\generated\TouchGFXConfiguration.cpp</name>
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\TouchGFX\target\generated\TouchGFXGeneratedHAL.cpp</name>
                         </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\STM32DMA.cpp</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\OSWrappers.cpp</name>
+                        </file>
                     </group>
+                    <file>
+                        <name>$PROJ_DIR$\..\TouchGFX\target\TouchGFXHAL.cpp</name>
+                    </file>
                     <file>
                         <name>$PROJ_DIR$\..\TouchGFX\target\STM32TouchController.cpp</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\TouchGFX\target\TouchGFXGPIO.cpp</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\TouchGFX\target\TouchGFXHAL.cpp</name>
                     </file>
                 </group>
             </group>
@@ -1633,37 +1633,16 @@
         <group>
             <name>STM32F7xx_HAL_Driver</name>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal.c</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_adc.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_adc_ex.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_cortex.c</name>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_crc.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_crc_ex.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma2d.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma_ex.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dsi.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_exti.c</name>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc_ex.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_flash.c</name>
@@ -1675,16 +1654,10 @@
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_gpio.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_i2c.c</name>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_i2c_ex.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_ltdc.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_ltdc_ex.c</name>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma_ex.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr.c</name>
@@ -1693,25 +1666,52 @@
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_pwr_ex.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_qspi.c</name>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_cortex.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc.c</name>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc_ex.c</name>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_i2c.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_i2c_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_exti.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_crc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_crc_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dma2d.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_ll_fmc.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_sdram.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_ltdc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_ltdc_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_dsi.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_qspi.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_tim.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_tim_ex.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_ll_fmc.c</name>
             </file>
         </group>
     </group>
@@ -1720,25 +1720,13 @@
         <group>
             <name>FreeRTOS</name>
             <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\croutine.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\list.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM7\r0p1\port.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM7\r0p1\portasm.s</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\queue.c</name>
@@ -1751,6 +1739,18 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\timers.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM7\r0p1\port.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM7\r0p1\portasm.s</name>
             </file>
         </group>
     </group>
@@ -1855,12 +1855,6 @@
                 <name>images</name>
                 <file>
                     <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\BitmapDatabase.cpp</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\image_arrow_down.cpp</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\image_arrow_up.cpp</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\TouchGFX\generated\images\src\image_button_invisible_256.cpp</name>
