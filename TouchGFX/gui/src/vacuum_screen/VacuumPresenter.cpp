@@ -19,13 +19,13 @@ void VacuumPresenter::deactivate()
 
 void VacuumPresenter::SetVacuum(int value)
 {
-#ifndef DISCONNECTED_PUMP
+#ifndef NO_PUMP
   model->GetBackend().Pump().SetUserVacuum(value);
 #endif
 }
 
 int VacuumPresenter::GetVacuum() {
-#ifdef DISCONNECTED_PUMP
+#ifdef NO_PUMP
   return 0;
 #else
   return (int)model->GetBackend().Pump().GetUserVacuum();
@@ -34,7 +34,7 @@ int VacuumPresenter::GetVacuum() {
 
 int VacuumPresenter::GetTimerMinutes()
 {
-#ifdef DISCONNECTED_PUMP
+#ifdef NO_PUMP
     return 0;
 #else
     return model->GetBackend().Pump().GetTimerMinutes();
@@ -43,7 +43,7 @@ int VacuumPresenter::GetTimerMinutes()
 
 void VacuumPresenter::OnVacuumTest(bool state)
 {
-#ifndef DISCONNECTED_PUMP
+#ifndef NO_PUMP
   model->GetBackend().Pump().SetPumpState(state);
 //  if (state) {
 //    model->GetBackend().Pump().Run();
@@ -55,7 +55,7 @@ void VacuumPresenter::OnVacuumTest(bool state)
 
 void VacuumPresenter::OnButtonBack()
 {
-#ifndef DISCONNECTED_PUMP
+#ifndef NO_PUMP
 //  model->GetBackend().Pump().SetPumpState(false);
   model->GetBackend().Pump().Stop();
 #endif
@@ -63,7 +63,7 @@ void VacuumPresenter::OnButtonBack()
 
 void VacuumPresenter::OnTimeChanged(int value)
 {
-#ifndef DISCONNECTED_PUMP
+#ifndef NO_PUMP
     model->GetBackend().Pump().SetTimer(value);
 #endif
 }

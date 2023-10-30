@@ -57,10 +57,14 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define COIL_PWM_Pin GPIO_PIN_1
+#define COIL_PWM_GPIO_Port GPIOA
 #define LCD_BCK_LGHT_Pin GPIO_PIN_3
 #define LCD_BCK_LGHT_GPIO_Port GPIOA
 #define PRESSURE_SENS_Pin GPIO_PIN_4
 #define PRESSURE_SENS_GPIO_Port GPIOA
+#define COIL_RES1_Pin GPIO_PIN_12
+#define COIL_RES1_GPIO_Port GPIOH
 #define LED2_Pin GPIO_PIN_13
 #define LED2_GPIO_Port GPIOB
 #define LCD_RST_Pin GPIO_PIN_11

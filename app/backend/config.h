@@ -2,8 +2,8 @@
 #define _CONFIG_H_
 
 #define DISCONNECTED_BACKEND
-#define DISCONNECTED_COIL
-//#define DISCONNECTED_PUMP
+#define NO_COIL
+//#define NO_PUMP
 #define NO_SERIALIZATION
 
 #if defined (WIN32)

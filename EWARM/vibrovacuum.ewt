@@ -1457,6 +1457,9 @@
             <file>
                 <name>$PROJ_DIR$\..\app\backend\api.hpp</name>
             </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\backend\config.h</name>
+            </file>
         </group>
         <group>
             <name>components_drivers</name>

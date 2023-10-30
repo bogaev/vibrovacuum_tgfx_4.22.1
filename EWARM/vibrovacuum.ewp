@@ -228,8 +228,6 @@
                     <name>CCDefines</name>
                     <state>USE_HAL_DRIVER</state>
                     <state>STM32F746xx</state>
-                    <state>DISCONNECTED_BACKEND</state>
-                    <state>NO_SERIALIZATION</state>
                     <state>USE_BPP=16</state>
                 </option>
                 <option>
@@ -1128,6 +1126,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\app\backend\api.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\backend\config.h</name>
             </file>
         </group>
         <group>

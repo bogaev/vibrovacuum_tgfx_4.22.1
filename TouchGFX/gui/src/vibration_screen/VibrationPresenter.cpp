@@ -19,21 +19,21 @@ void VibrationPresenter::deactivate()
 
 void VibrationPresenter::SetIntensity(int value)
 {
-#ifndef DISCONNECTED_COIL
+#ifndef NO_COIL
   model->GetBackend().Coil().SetIntesity(value);
 #endif
 }
 
 void VibrationPresenter::SetFrequency(int value)
 {
-#ifndef DISCONNECTED_COIL
+#ifndef NO_COIL
     model->GetBackend().Coil().SetFrequency(value);
 #endif
 }
 
 int VibrationPresenter::GetIntensity()
 {
-#ifdef DISCONNECTED_COIL
+#ifdef NO_COIL
     return 0;
 #else
     return (double)model->GetBackend().Coil().GetIntesity();
@@ -42,7 +42,7 @@ int VibrationPresenter::GetIntensity()
 
 int VibrationPresenter::GetFrequency()
 {
-#ifdef DISCONNECTED_COIL
+#ifdef NO_COIL
     return 0;
 #else
     return model->GetBackend().Coil().GetFrequency();
@@ -51,7 +51,7 @@ int VibrationPresenter::GetFrequency()
 
 int VibrationPresenter::GetTimerMinutes()
 {
-#ifdef DISCONNECTED_COIL
+#ifdef NO_COIL
     return 0;
 #else
     return model->GetBackend().Coil().GetTimerMinutes();
@@ -60,7 +60,7 @@ int VibrationPresenter::GetTimerMinutes()
 
 void VibrationPresenter::OnVibrationTest(bool state)
 {
-#ifndef DISCONNECTED_COIL
+#ifndef NO_COIL
   model->GetBackend().Coil().SetState(state);
 //  if (state) {
 //    model->GetBackend().Coil().Run();
@@ -72,7 +72,7 @@ void VibrationPresenter::OnVibrationTest(bool state)
 
 void VibrationPresenter::OnButtonBack()
 {
-#ifndef DISCONNECTED_COIL
+#ifndef NO_COIL
 //  model->GetBackend().Coil().SetState(false);
   model->GetBackend().Coil().Stop();
 #endif
@@ -80,7 +80,7 @@ void VibrationPresenter::OnButtonBack()
 
 void VibrationPresenter::OnTimeChanged(int value)
 {
-#ifndef DISCONNECTED_COIL
+#ifndef NO_COIL
     model->GetBackend().Coil().SetTimer(value);
 #endif
 }

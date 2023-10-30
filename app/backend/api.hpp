@@ -25,7 +25,7 @@ public:
   Backend(Backend const& s) = delete;
   Backend& operator=(Backend const& s) = delete;
 
-#ifndef DISCONNECTED_COIL
+#ifndef NO_COIL
   coil::Controller& Coil() {
     return coil_;
   }
@@ -48,7 +48,7 @@ public:
 #endif
 
 private:
-#ifndef DISCONNECTED_COIL
+#ifndef NO_COIL
   coil::Controller coil_;
 #endif
   pump::Controller pump_;
@@ -60,13 +60,13 @@ private:
   static inline Backend* backend_ = nullptr;
 
   Backend(
-#ifndef DISCONNECTED_COIL
+#ifndef NO_COIL
           coil::InitSettings coil_settings,
 #endif
           pump::InitSettings pump_settings
 //          miostim::InitSettings mio_settings
             ) :
-#ifndef DISCONNECTED_COIL
+#ifndef NO_COIL
       coil_(coil_settings),
 #endif
       pump_(pump_settings)
