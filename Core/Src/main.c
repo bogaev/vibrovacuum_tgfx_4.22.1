@@ -30,8 +30,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "components/flash/n25q128a_qspi.h"
-#include "components/sdram/is42S16400j-7tli.h"
+#include "components_drivers/flash/n25q128a_qspi.h"
+#include "components_drivers/sdram/is42S16400j-7tli.h"
 #include "tests/config_tests.h"
 /* USER CODE END Includes */
 

@@ -2,7 +2,7 @@
 
 #include "common\common.h"
 #include "backend\api.hpp"
-#include "components\lcd_touch\lcd_touch.hpp"
+#include "components_drivers\lcd_touch\lcd_touch.hpp"
 
 InterruptManager<uint16_t> exti_interrupt_manager;
 InterruptManager<TimerHandle_t> os_tim_interrupt_manager;

@@ -1,9 +1,9 @@
 #ifndef _TOUCH_SCREEN_CREATE_H_
 #define _TOUCH_SCREEN_CREATE_H_
 
-#include "components/touch/gt811.h"
-#include "components/touch/gt811_waveshare.h"
-#include "components/touch/gt911.h"
+#include "components_drivers/touch/gt811.h"
+#include "components_drivers/touch/gt811_waveshare.h"
+#include "components_drivers/touch/gt911.h"
 
 class TouchScreenFactory {
  public:

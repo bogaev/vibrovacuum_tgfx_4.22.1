@@ -1,14 +1,13 @@
 #ifndef _PUMP_CONTROLLER_H_
 #define _PUMP_CONTROLLER_H_
 
-#include "utility\callback.hpp"
-#include "periphery_drivers\pwm\pwm_controller.hpp"
-#include "devices\pressure_sensor\pressure_sensor_controller.hpp"
-#include "utility\timer_facility.hpp"
-#include "utility\callback.hpp"
+#include "periphery_drivers/pwm/pwm_controller.hpp"
+#include "backend/devices/pressure_sensor/pressure_sensor_controller.hpp"
+#include "utility/timer_facility.hpp"
+#include "utility/callback.hpp"
 
 #ifndef NO_SERIALIZATION
-#include "periphery_drivers\flash\flash.hpp"
+#include "periphery_drivers/flash/flash.hpp"
 #endif
 
 namespace pump {

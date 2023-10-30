@@ -25,7 +25,7 @@
 #include <STM32TouchController.hpp>
 
 #include "main.h"
-#include "components/lcd_touch/lcd_touch.hpp"
+#include "components_drivers/lcd_touch/lcd_touch.hpp"
 
 extern LcdTouch screen;
 

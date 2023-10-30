@@ -7,7 +7,7 @@ extern "C" {
 
   /* Includes ------------------------------------------------------------------*/
 #include "stm32f7xx_hal.h"
-#include "components/touch/touch_screen_interface.hpp"
+#include "components_drivers/touch/touch_screen_interface.hpp"
   /* Macros --------------------------------------------------------------------*/
 
   /**

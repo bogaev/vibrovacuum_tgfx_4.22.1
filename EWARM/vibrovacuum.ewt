@@ -1433,22 +1433,22 @@
             <group>
                 <name>pressure_sensor</name>
                 <file>
-                    <name>$PROJ_DIR$\..\app\devices\pressure_sensor\pressure_sensor_controller.cpp</name>
+                    <name>$PROJ_DIR$\..\app\backend\devices\pressure_sensor\pressure_sensor_controller.cpp</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\devices\pressure_sensor\pressure_sensor_controller.hpp</name>
+                    <name>$PROJ_DIR$\..\app\backend\devices\pressure_sensor\pressure_sensor_controller.hpp</name>
                 </file>
             </group>
             <group>
                 <name>pump</name>
                 <file>
-                    <name>$PROJ_DIR$\..\app\devices\pump\pump_controller.cpp</name>
+                    <name>$PROJ_DIR$\..\app\backend\devices\pump\pump_controller.cpp</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\devices\pump\pump_controller.hpp</name>
+                    <name>$PROJ_DIR$\..\app\backend\devices\pump\pump_controller.hpp</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\devices\pump\pump_states.hpp</name>
+                    <name>$PROJ_DIR$\..\app\backend\devices\pump\pump_states.hpp</name>
                 </file>
             </group>
             <file>
@@ -1459,74 +1459,74 @@
             </file>
         </group>
         <group>
-            <name>components</name>
+            <name>components_drivers</name>
             <group>
                 <name>flash</name>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\flash\n25q128a.h</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\flash\n25q128a.h</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\flash\n25q128a_qspi.c</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\flash\n25q128a_qspi.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\flash\n25q128a_qspi.h</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\flash\n25q128a_qspi.h</name>
                 </file>
             </group>
             <group>
                 <name>lcd_touch</name>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\lcd_touch\lcd_touch.cpp</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\lcd_touch\lcd_touch.cpp</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\lcd_touch\lcd_touch.hpp</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\lcd_touch\lcd_touch.hpp</name>
                 </file>
             </group>
             <group>
                 <name>sdram</name>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\sdram\is42S16400j-7tli.c</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\sdram\is42S16400j-7tli.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\sdram\is42S16400j-7tli.h</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\sdram\is42S16400j-7tli.h</name>
                 </file>
             </group>
             <group>
                 <name>touch</name>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\CT_I2C.c</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\CT_I2C.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\CT_I2C.h</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\CT_I2C.h</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\gt811.c</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\gt811.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\gt811.h</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\gt811.h</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\gt811_waveshare.c</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\gt811_waveshare.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\gt811_waveshare.h</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\gt811_waveshare.h</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\gt911.c</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\gt911.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\gt911.h</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\gt911.h</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\touch_screen_factory.hpp</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\touch_screen_factory.hpp</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\touch_screen_interface.hpp</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\touch_screen_interface.hpp</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\TS_I2C.c</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\TS_I2C.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\app\components\touch\TS_I2C.h</name>
+                    <name>$PROJ_DIR$\..\app\components_drivers\touch\TS_I2C.h</name>
                 </file>
                 <configuration>
                     <name>vibrovacuum</name>

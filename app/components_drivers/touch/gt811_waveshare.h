@@ -3,7 +3,7 @@
 
 #include "stm32f7xx_hal.h"
 
-#include "components/touch/touch_screen_interface.hpp"
+#include "components_drivers/touch/touch_screen_interface.hpp"
 
 #define  GT811_MAX_WIDTH        ((uint16_t)1024)    	//Touchscreen pad max width
 #define  GT811_MAX_HEIGHT       ((uint16_t)600)     	//Touchscreen pad max height

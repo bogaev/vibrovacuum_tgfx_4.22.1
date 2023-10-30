@@ -1,5 +1,5 @@
 #include "flash_tests.h"
-#include "components/flash/n25q128a_qspi.h"
+#include "components_drivers/flash/n25q128a_qspi.h"
 #include "assert.h"
 
 #define COUNTOF(__BUFFER__)        (sizeof(__BUFFER__) / sizeof(*(__BUFFER__)))

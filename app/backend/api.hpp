@@ -2,8 +2,8 @@
 #define _BACKEND_API_H_
 
 #include "common\common.h"
-#include "devices\pump\pump_controller.hpp"
-//#include "devices\coil\coil_controller.hpp"
+#include "backend\devices\pump\pump_controller.hpp"
+//#include "backend\devices\coil\coil_controller.hpp"
 //#include "devices\pressure_sensor\pressure_sensor_controller.hpp"
 //#include "devices\miostimul\pattern_runner\pattern_runner.hpp"
 //#include "mcu_periphery\flash\flash.hpp"
@@ -25,9 +25,11 @@ public:
   Backend(Backend const& s) = delete;
   Backend& operator=(Backend const& s) = delete;
 
-//  coil::Controller& Coil() {
-//    return coil_;
-//  }
+#ifndef DISCONNECTED_COIL
+  coil::Controller& Coil() {
+    return coil_;
+  }
+#endif
 
   pump::Controller& Pump() {
     return pump_;
@@ -39,26 +41,39 @@ public:
 
   void Start();
   void Stop();
-//  void AddSerializedClass(flash::SerializedClass* cls) {
-//    flash_.AddClass(std::move(cls));
-//  }
+#ifndef NO_SERIALIZATION
+  void AddSerializedClass(flash::SerializedClass* cls) {
+    flash_.AddClass(std::move(cls));
+  }
+#endif
 
 private:
-//  coil::Controller coil_;
+#ifndef DISCONNECTED_COIL
+  coil::Controller coil_;
+#endif
   pump::Controller pump_;
 //  miostim::PatternRunner miostim_;
-//  flash::Controller flash_;
+#ifndef NO_SERIALIZATION
+  flash::Controller flash_;
+#endif
 
   static inline Backend* backend_ = nullptr;
 
-  Backend(//coil::InitSettings coil_settings,
+  Backend(
+#ifndef DISCONNECTED_COIL
+          coil::InitSettings coil_settings,
+#endif
           pump::InitSettings pump_settings
 //          miostim::InitSettings mio_settings
-         )
-    : //coil_(coil_settings)
+            ) :
+#ifndef DISCONNECTED_COIL
+      coil_(coil_settings),
+#endif
       pump_(pump_settings)
 //    , miostim_(mio_settings)
-//    , flash_(std::vector<flash::SerializedClass*>{ &coil_, &pump_, &miostim_ })
+#ifndef NO_SERIALIZATION
+    , flash_(std::vector<flash::SerializedClass*>{ &coil_, &pump_, &miostim_ })
+#endif
   {}
 };
 
