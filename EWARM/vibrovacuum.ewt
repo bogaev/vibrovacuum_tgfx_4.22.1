@@ -1431,6 +1431,15 @@
         <group>
             <name>backend</name>
             <group>
+                <name>coil</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\backend\devices\coil\coil_controller.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\backend\devices\coil\coil_controller.hpp</name>
+                </file>
+            </group>
+            <group>
                 <name>pressure_sensor</name>
                 <file>
                     <name>$PROJ_DIR$\..\app\backend\devices\pressure_sensor\pressure_sensor_controller.cpp</name>

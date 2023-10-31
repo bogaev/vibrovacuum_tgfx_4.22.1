@@ -683,7 +683,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>0</hasPrio>
+                <hasPrio>128</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -1100,6 +1100,15 @@
         <name>app</name>
         <group>
             <name>backend</name>
+            <group>
+                <name>coil</name>
+                <file>
+                    <name>$PROJ_DIR$\..\app\backend\devices\coil\coil_controller.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\app\backend\devices\coil\coil_controller.hpp</name>
+                </file>
+            </group>
             <group>
                 <name>pressure_sensor</name>
                 <file>

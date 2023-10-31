@@ -1170,7 +1170,7 @@
             "X": 479,
             "Y": 345,
             "Width": 303,
-            "Height": 48,
+            "Height": 53,
             "TextId": "TitlePattern",
             "TextRotation": "0",
             "AutoSize": true
@@ -1221,7 +1221,7 @@
             "X": 479,
             "Y": 189,
             "Width": 319,
-            "Height": 48,
+            "Height": 53,
             "TextId": "TitleModDepth",
             "TextRotation": "0",
             "AutoSize": true
@@ -1271,7 +1271,7 @@
             "X": 479,
             "Y": 36,
             "Width": 322,
-            "Height": 48,
+            "Height": 53,
             "TextId": "TitleModRate",
             "TextRotation": "0",
             "AutoSize": true

@@ -27,16 +27,18 @@ void InitBackend() {
 Backend* Backend::GetInstance() {
   if(backend_ == nullptr) {
       backend_ = new Backend(
-//        coil::InitSettings {
-//          pwm::InitSettings {
-//            .timer = &htim5,
-//            .channel = TIM_CHANNEL_2
-//          }, // pwm_vibration
-//          util::FreqInitSettings {
-//            .freq = 10.,
-//            .duty_cycle = 0.5
-//          }
-//        },
+#ifndef NO_COIL
+        coil::InitSettings {
+          pwm::InitSettings {
+            .timer = &htim5,
+            .channel = TIM_CHANNEL_2
+          }, // pwm_vibration
+          util::FreqInitSettings {
+            .freq = 10.,
+            .duty_cycle = 0.5
+          }
+        },
+#endif
         pump::InitSettings {
            pwm::InitSettings{
              .timer = &htim4,

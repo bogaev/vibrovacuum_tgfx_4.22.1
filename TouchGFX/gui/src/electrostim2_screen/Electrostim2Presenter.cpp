@@ -18,13 +18,13 @@ void Electrostim2Presenter::deactivate()
 }
 
 int Electrostim2Presenter::GetMinutes() {
-#ifndef DISCONNECTED_BACKEND
+#ifndef NO_ELECTRO
   return model->GetBackend().Miostim().GetMinutes();
 #endif
 }
 
 void Electrostim2Presenter::OnElectrostimTest(bool state) {
-#ifndef DISCONNECTED_BACKEND
+#ifndef NO_ELECTRO
   model->GetBackend().Miostim().SetState(state);
 //  if (state) {
 //    model->GetBackend().Miostim().Run();
@@ -36,7 +36,7 @@ void Electrostim2Presenter::OnElectrostimTest(bool state) {
 
 void Electrostim2Presenter::OnButtonBack()
 {
-#ifndef DISCONNECTED_BACKEND
+#ifndef NO_ELECTRO
 //  model->GetBackend().Miostim().SetState(false);
   model->GetBackend().Miostim().Stop();
 #endif
@@ -44,12 +44,14 @@ void Electrostim2Presenter::OnButtonBack()
 
 void Electrostim2Presenter::OnTimeChanged(int value)
 {
-#ifndef DISCONNECTED_BACKEND
+#ifndef NO_ELECTRO
     model->GetBackend().Miostim().SetTimer(value);
 #endif
 }
 
 void Electrostim2Presenter::OnMiostimTimerExpired()
 {
+#ifndef NO_ELECTRO
   view.OnMiostimTimerExpired();
+#endif
 }

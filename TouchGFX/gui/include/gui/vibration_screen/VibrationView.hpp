@@ -12,13 +12,14 @@ public:
     virtual ~VibrationView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+#ifndef NO_COIL
     void OnIntensityChange(int value) override;
     void OnFrequencyChange(int value) override;
     void OnVibrationTest() override;
     void OnButtonBack() override;
     void OnTimeChanged(int value) override;
     void OnCoilTimerExpired();
-
+#endif
 protected:
 };
 

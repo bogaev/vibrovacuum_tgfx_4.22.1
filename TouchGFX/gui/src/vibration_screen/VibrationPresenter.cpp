@@ -87,5 +87,7 @@ void VibrationPresenter::OnTimeChanged(int value)
 
 void VibrationPresenter::OnCoilTimerExpired()
 {
+#ifndef NO_COIL
   view.OnCoilTimerExpired();
+#endif
 }

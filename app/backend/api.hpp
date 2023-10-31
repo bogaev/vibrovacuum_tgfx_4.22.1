@@ -3,10 +3,15 @@
 
 #include "common\common.h"
 #include "backend\devices\pump\pump_controller.hpp"
-//#include "backend\devices\coil\coil_controller.hpp"
+
+#ifndef NO_COIL
+#include "backend\devices\coil\coil_controller.hpp"
+#endif
 //#include "devices\pressure_sensor\pressure_sensor_controller.hpp"
 //#include "devices\miostimul\pattern_runner\pattern_runner.hpp"
-//#include "mcu_periphery\flash\flash.hpp"
+#ifndef NO_SERIALIZATION
+#include "mcu_periphery\flash\flash.hpp"
+#endif
 
 #include "FreeRTOS.h"
 #include "task.h"

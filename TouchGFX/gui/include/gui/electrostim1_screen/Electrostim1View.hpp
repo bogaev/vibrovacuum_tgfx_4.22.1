@@ -16,17 +16,18 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
+#ifndef NO_ELECTRO
     virtual void OnPatternChange(int value) override;
     virtual void OnModFreqChange(int value) override;
     virtual void OnModDepthChange(int value) override;
     virtual void OnModRatioChange(int value) override;
-
     void OnButtonBack() override;
 
 protected:
 
 private:
     void InitSliders();
+#endif
 };
 
 #endif // ELECTROSTIM1VIEW_HPP

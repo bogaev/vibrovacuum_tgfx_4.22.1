@@ -8,7 +8,9 @@ void Electrostim1View::setupScreen()
 {
   Electrostim1ViewBase::setupScreen();
 
+#ifndef NO_ELECTRO
   InitSliders();
+#endif
 }
 
 void Electrostim1View::tearDownScreen()
@@ -16,6 +18,7 @@ void Electrostim1View::tearDownScreen()
   Electrostim1ViewBase::tearDownScreen();
 }
 
+#ifndef NO_ELECTRO
 void Electrostim1View::OnPatternChange(int value)
 {
   updateValueArea(value, textPatternBuffer, textPattern, TEXTPATTERN_SIZE);
@@ -28,25 +31,20 @@ void Electrostim1View::OnPatternChange(int value)
 
 void Electrostim1View::OnModFreqChange(int value)
 {
-#ifndef DISCONNECTED_BACKEND
   int v = static_cast<int>(miostim::mod_values::FREQ_MOD[value]);
   updateValueArea(v, textValueFreqBuffer, textValueFreq, TEXTVALUEFREQ_SIZE);
   presenter->SetModFreq(value);
-#endif
 }
 
 void Electrostim1View::OnModDepthChange(int value)
 {
-#ifndef DISCONNECTED_BACKEND
   int v = static_cast<int>(miostim::mod_values::DEPTH_MOD_PERCENT[value]);
   updateValueArea(v, textValueModDepthBuffer, textValueModDepth, TEXTVALUEMODDEPTH_SIZE);
   presenter->SetModDepth(value);
-#endif
 }
 
 void Electrostim1View::OnModRatioChange(int value)
 {
-#ifndef DISCONNECTED_BACKEND
   int v = static_cast<int>(miostim::mod_values::STAGES_RATIO[value][0]);
   updateValueArea(v, textValueModRatioBuffer1, textValueModRatio, TEXTVALUEMODRATIOBUFFER1_SIZE);
 
@@ -59,12 +57,10 @@ void Electrostim1View::OnModRatioChange(int value)
     updateValueArea(v, textValueModRatioBuffer2, textValueModRatio, TEXTVALUEMODRATIOBUFFER2_SIZE);
   }
   presenter->SetModRatio(value);
-#endif
 }
 
 void Electrostim1View::InitSliders()
 {
-#ifndef DISCONNECTED_BACKEND
   int value = presenter->GetPattern();
   sliderPattern.setValue(value);
   updateValueArea(1, textPatternBuffer, textPattern, TEXTPATTERN_SIZE);
@@ -91,10 +87,10 @@ void Electrostim1View::InitSliders()
   textValueModRatio.invalidate();
   sliderModRatio.setValue(v);
   sliderModRatio.invalidate();
-#endif
 }
 
 void Electrostim1View::OnButtonBack()
 {
   presenter->OnButtonBack();
 }
+#endif

@@ -15,6 +15,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
+#ifndef NO_ELECTRO
     void OnElectrostimTest() override;
     void OnTimeChanged(int value) override;
 
@@ -24,6 +25,7 @@ protected:
 
 private:
     void InitSliders();
+#endif
 };
 
 #endif // ELECTROSTIM2VIEW_HPP

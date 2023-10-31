@@ -20,7 +20,7 @@ Model::Model() :
 //  backend_->AddSerializedClass(this);
   backend_->Start();
 #ifndef NO_COIL
-//  backend_->Coil().SetExpireTimerHandler(this, &Model::OnCoilTimerExpired);
+  backend_->Coil().SetExpireTimerHandler(this, &Model::OnCoilTimerExpired);
 #endif
 #ifndef NO_PUMP
   backend_->Pump().SetExpireTimerHandler(this, &Model::OnPumpTimerExpired);
@@ -150,14 +150,23 @@ TimersStats Model::GetExpiryTimeMS()
 //    return {};
 //  #else
 #ifndef NO_PUMP
-      uint32_t vaco = backend_->Pump().GetTimerExpiryMS();
-      return std::make_tuple(std::make_pair(is_vacuum_expired_, vaco),
-                             std::make_pair(is_vibration_expired_, 0),
-                             std::make_pair(is_electrostim_expired_, 0));
+  uint32_t vaco = backend_->Pump().GetTimerExpiryMS();
 #else
-      uint32_t vibro = backend_->Coil().GetTimerExpiryMS();
-      uint32_t electro = backend_->Miostim().GetTimerExpiryMS();
+  uint32_t vaco = 0;
 #endif
+#ifndef NO_COIL
+  uint32_t vibro = backend_->Coil().GetTimerExpiryMS();
+#else
+  uint32_t vibro = 0;
+#endif
+#ifndef NO_ELECTRO
+  uint32_t electro = backend_->Miostim().GetTimerExpiryMS();
+#else
+  uint32_t electro = 0;
+#endif
+  return std::make_tuple(std::make_pair(is_vacuum_expired_, vaco),
+                         std::make_pair(is_vibration_expired_, vibro),
+                         std::make_pair(is_electrostim_expired_, electro));
 }
 
 bool Model::IsTotalStateExpired()
