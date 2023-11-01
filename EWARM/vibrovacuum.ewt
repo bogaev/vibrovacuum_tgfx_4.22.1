@@ -1440,6 +1440,72 @@
                 </file>
             </group>
             <group>
+                <name>miostim</name>
+                <group>
+                    <name>params_updater</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\params_updater\params_updater.h</name>
+                    </file>
+                </group>
+                <group>
+                    <name>pattern_runner</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\pattern_runner\pattern_runner.cpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\pattern_runner\pattern_runner.hpp</name>
+                    </file>
+                </group>
+                <group>
+                    <name>pwm_controller</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\pwm_controller\pwm_controller.cpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\pwm_controller\pwm_controller.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\pwm_controller\pwm_controller_mock.h</name>
+                    </file>
+                </group>
+                <group>
+                    <name>pwm_generator</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\pwm_generator\pwm_generator.cpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\pwm_generator\pwm_generator.h</name>
+                    </file>
+                </group>
+                <group>
+                    <name>signal_modulator</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\signal_modulator\signal_modulator.cpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\signal_modulator\signal_modulator.h</name>
+                    </file>
+                </group>
+                <group>
+                    <name>signals</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\signals\signals.cpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\signals\signals.h</name>
+                    </file>
+                </group>
+                <group>
+                    <name>treatment_patterns</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\treatment_patterns\treatment_patterns.cpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\app\backend\devices\miostim\treatment_patterns\treatment_patterns.hpp</name>
+                    </file>
+                </group>
+            </group>
+            <group>
                 <name>pressure_sensor</name>
                 <file>
                     <name>$PROJ_DIR$\..\app\backend\devices\pressure_sensor\pressure_sensor_controller.cpp</name>
@@ -1610,6 +1676,15 @@
         </group>
         <group>
             <name>utility</name>
+            <file>
+                <name>$PROJ_DIR$\..\app\utility\observer.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\utility\os_tasks_wrapper.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\app\utility\os_tasks_wrapper.h</name>
+            </file>
             <file>
                 <name>$PROJ_DIR$\..\app\utility\software_pwm.cpp</name>
             </file>

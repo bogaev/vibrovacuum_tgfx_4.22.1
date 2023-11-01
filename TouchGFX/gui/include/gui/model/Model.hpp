@@ -25,7 +25,7 @@ using TimersStats = std::tuple<std::pair<bool, int>,
 constexpr uint8_t MAX_ALPHA = 255;
 
 class Model
-#ifndef DISCONNECTED_BACKEND
+#ifndef NO_SERIALIZATION
   : public flash::SerializedClass
 #endif
 {
@@ -56,11 +56,9 @@ public:
   void Deserialize() override;
 #endif
 
-//#ifndef DISCONNECTED_BACKEND
   Backend& GetBackend() {
     return *backend_;
   }
-//#endif
 
 protected:
   ModelListener* modelListener;
@@ -74,7 +72,6 @@ private:
   bool is_vibration_expired_ = true;
   bool is_electrostim_expired_ = true;
 
-//#ifndef DISCONNECTED_BACKEND
   bool is_backend_started_ = false;
   Backend* backend_ = nullptr;
 
@@ -85,7 +82,6 @@ private:
       is_backend_started_ = true;
     }
   }
-//#endif
 
   void OnCoilTimerExpired();
   void OnPumpTimerExpired();

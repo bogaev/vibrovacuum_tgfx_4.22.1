@@ -39,6 +39,7 @@ Backend* Backend::GetInstance() {
           }
         },
 #endif
+#ifndef NO_PUMP
         pump::InitSettings {
            pwm::InitSettings{
              .timer = &htim4,
@@ -52,16 +53,19 @@ Backend* Backend::GetInstance() {
              .threshhold = 500
            }
         }
-//        miostim::InitSettings {
-//          .pwm_timer = &htim3,
-//          .pattern_timer = &htim14,
-//          .sample_timer = &htim13,
-//          { TIM_CHANNEL_2, TIM_CHANNEL_3 },
-//          .min_duty_cycle_percent = 0,
-//          .max_duty_cycle_percent = 100,
-//          .dead_time_th_percent = 0,
-//          0
-//        }
+#endif
+#ifndef NO_ELECTRO
+      , miostim::InitSettings {
+          .pwm_timer = &htim3,
+          .pattern_timer = &htim14,
+          .sample_timer = &htim13,
+          { TIM_CHANNEL_2, TIM_CHANNEL_3 },
+          .min_duty_cycle_percent = 0,
+          .max_duty_cycle_percent = 100,
+          .dead_time_th_percent = 0,
+          0
+        }
+#endif
     );
   }
 
@@ -69,22 +73,34 @@ Backend* Backend::GetInstance() {
 }
 
 void Backend::Start() {
-//  flash_.Init();
-//  coil_.Start();
+#ifndef NO_SERIALIZATION
+  flash_.Init();
+#endif
+#ifndef NO_COIL
+  coil_.Start();
+#endif
+#ifndef NO_PUMP
   pump_.Start();
-//  miostim_.Start();
-
+#endif
+#ifndef NO_ELECTRO
+  miostim_.Start();
+#endif
 //  static pwm::IT_Controller pwm_controller_test(&htim3, TIM_CHANNEL_2);
 //  pwm_controller_test.Start();
 //  pwm_controller_test.SetPwm(100);
-
 #if defined (__DEBUG)
 //  InitTest();
 #endif
 }
 
 void Backend::Stop() {
-//  coil_.Stop();
+#ifndef NO_COIL
+  coil_.Stop();
+#endif
+#ifndef NO_PUMP
   pump_.Stop();
-//  miostim_.Stop();
+#endif
+#ifndef NO_ELECTRO
+  miostim_.Stop();
+#endif
 }

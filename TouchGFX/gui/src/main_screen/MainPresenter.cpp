@@ -38,7 +38,7 @@ bool MainPresenter::GetElectrostimCheck()
 
 bool MainPresenter::GetVibrationState()
 {
-#ifndef DISCONNECTED_BACKEND
+#ifndef NO_COIL
   return model->GetBackend().Coil().GetState();
 #endif
 }

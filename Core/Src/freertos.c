@@ -51,7 +51,7 @@
 osThreadId_t GuiTaskHandle;
 const osThreadAttr_t GuiTask_attributes = {
   .name = "GuiTask",
-  .stack_size = 4096 * 4,
+  .stack_size = 8192 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 

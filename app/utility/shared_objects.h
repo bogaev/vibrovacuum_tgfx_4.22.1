@@ -2,7 +2,7 @@
 #define _SHARED_OBJECTS_H_
 
 #include "utility\observer.h"
-#include "common_\common.h"
+#include "common\common.h"
 //#include "signal_generator\params_updater\params_updater.h"
 
 struct SharedObjects {

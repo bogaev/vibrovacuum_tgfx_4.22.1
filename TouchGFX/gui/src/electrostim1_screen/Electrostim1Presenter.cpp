@@ -28,6 +28,8 @@ int Electrostim1Presenter::GetPattern()
 {
 #ifndef NO_ELECTRO
   return model->GetBackend().Miostim().GetPattern();
+#else
+  return 0;
 #endif
 }
 
@@ -42,6 +44,8 @@ int Electrostim1Presenter::GetModFreq()
 {
 #ifndef NO_ELECTRO
   return model->GetBackend().Miostim().GetModFreq();
+#else
+  return 0;
 #endif
 }
 
@@ -56,6 +60,8 @@ int Electrostim1Presenter::GetModDepth()
 {
 #ifndef NO_ELECTRO
   return model->GetBackend().Miostim().GetModDepth();
+#else
+  return 0;
 #endif
 }
 
@@ -70,6 +76,8 @@ int Electrostim1Presenter::GetModRatio()
 {
 #ifndef NO_ELECTRO
   return model->GetBackend().Miostim().GetModRatio();
+#else
+  return 0;
 #endif
 }
 

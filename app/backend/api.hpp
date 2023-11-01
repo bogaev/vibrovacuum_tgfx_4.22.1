@@ -2,13 +2,18 @@
 #define _BACKEND_API_H_
 
 #include "common\common.h"
-#include "backend\devices\pump\pump_controller.hpp"
 
 #ifndef NO_COIL
 #include "backend\devices\coil\coil_controller.hpp"
 #endif
-//#include "devices\pressure_sensor\pressure_sensor_controller.hpp"
-//#include "devices\miostimul\pattern_runner\pattern_runner.hpp"
+
+#ifndef NO_PUMP
+#include "backend\devices\pump\pump_controller.hpp"
+#include "backend\devices\pressure_sensor\pressure_sensor_controller.hpp"
+#endif
+#ifndef NO_ELECTRO
+#include "backend\devices\miostim\pattern_runner\pattern_runner.hpp"
+#endif
 #ifndef NO_SERIALIZATION
 #include "mcu_periphery\flash\flash.hpp"
 #endif
@@ -29,23 +34,24 @@ public:
   static Backend* GetInstance();
   Backend(Backend const& s) = delete;
   Backend& operator=(Backend const& s) = delete;
+  void Start();
+  void Stop();
 
 #ifndef NO_COIL
   coil::Controller& Coil() {
     return coil_;
   }
 #endif
-
+#ifndef NO_PUMP
   pump::Controller& Pump() {
     return pump_;
   }
-
-//  miostim::PatternRunner& Miostim() {
-//    return miostim_;
-//  }
-
-  void Start();
-  void Stop();
+#endif
+#ifndef NO_ELECTRO
+  miostim::PatternRunner& Miostim() {
+    return miostim_;
+  }
+#endif
 #ifndef NO_SERIALIZATION
   void AddSerializedClass(flash::SerializedClass* cls) {
     flash_.AddClass(std::move(cls));
@@ -56,8 +62,12 @@ private:
 #ifndef NO_COIL
   coil::Controller coil_;
 #endif
+#ifndef NO_PUMP
   pump::Controller pump_;
-//  miostim::PatternRunner miostim_;
+#endif
+#ifndef NO_ELECTRO
+  miostim::PatternRunner miostim_;
+#endif
 #ifndef NO_SERIALIZATION
   flash::Controller flash_;
 #endif
@@ -69,13 +79,17 @@ private:
           coil::InitSettings coil_settings,
 #endif
           pump::InitSettings pump_settings
-//          miostim::InitSettings mio_settings
+#ifndef NO_ELECTRO
+        , miostim::InitSettings mio_settings
+#endif
             ) :
 #ifndef NO_COIL
       coil_(coil_settings),
 #endif
       pump_(pump_settings)
-//    , miostim_(mio_settings)
+#ifndef NO_ELECTRO
+    , miostim_(mio_settings)
+#endif
 #ifndef NO_SERIALIZATION
     , flash_(std::vector<flash::SerializedClass*>{ &coil_, &pump_, &miostim_ })
 #endif

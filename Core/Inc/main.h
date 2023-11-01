@@ -63,6 +63,10 @@ void Error_Handler(void);
 #define LCD_BCK_LGHT_GPIO_Port GPIOA
 #define PRESSURE_SENS_Pin GPIO_PIN_4
 #define PRESSURE_SENS_GPIO_Port GPIOA
+#define MIOSTIM_1_Pin GPIO_PIN_7
+#define MIOSTIM_1_GPIO_Port GPIOA
+#define MIOSTIM_2_Pin GPIO_PIN_0
+#define MIOSTIM_2_GPIO_Port GPIOB
 #define COIL_RES1_Pin GPIO_PIN_12
 #define COIL_RES1_GPIO_Port GPIOH
 #define LED2_Pin GPIO_PIN_13
