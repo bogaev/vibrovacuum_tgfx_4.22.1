@@ -2,10 +2,15 @@
 
 #define pdTICKS_TO_MS( xTicks ) ( ( uint32_t ) ( ( ( uint32_t ) ( xTicks ) * ( uint32_t ) 1000 ) / ( uint32_t ) configTICK_RATE_HZ ) )
 
+#define IS_IRQ_MODE()             (__get_IPSR() != 0U)
+#define IS_IRQ_MASKED()           ((__get_PRIMASK() != 0U) || (__get_BASEPRI() != 0U))
+extern osKernelState_t KernelState;
+#define IS_IRQ()                  (IS_IRQ_MODE() || (IS_IRQ_MASKED() && (KernelState == osKernelRunning)))
+
 namespace tim {
 
 // TimerInterface class =============================================
-  
+
 TimerInterface::TimerInterface(TimerPeriod period_ms) :
   period_ms_(period_ms)
 {}
@@ -29,21 +34,58 @@ SW_FreeRTOS_Timer::~SW_FreeRTOS_Timer() {
 }
 
 void SW_FreeRTOS_Timer::Start() {
-  xTimerStart(tim_handle_, osWaitForever);
+  BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+  if (!IS_IRQ()) {
+    xTimerStart(tim_handle_, osWaitForever);
+  } else {
+    if (xTimerStartFromISR(tim_handle_, &xHigherPriorityTaskWoken) != pdTRUE) {
+      Error_Handler();
+    }
+    portYIELD_FROM_ISR (xHigherPriorityTaskWoken);
+  }
 }
 
 void SW_FreeRTOS_Timer::Stop() {
-  xTimerStop(tim_handle_, osWaitForever);
+  BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+  if (!IS_IRQ()) {
+    xTimerStop(tim_handle_, osWaitForever);
+  } else {
+    if (xTimerStopFromISR(tim_handle_, &xHigherPriorityTaskWoken) != pdTRUE) {
+      Error_Handler();
+    }
+    portYIELD_FROM_ISR (xHigherPriorityTaskWoken);
+  }
 }
 
 void SW_FreeRTOS_Timer::Reset() {
-  xTimerReset(tim_handle_, osWaitForever);
+  BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+  if (!IS_IRQ()) {
+    xTimerReset(tim_handle_, osWaitForever);
+  } else {
+    if (xTimerResetFromISR(tim_handle_, &xHigherPriorityTaskWoken) != pdTRUE) {
+      Error_Handler();
+    }
+    portYIELD_FROM_ISR (xHigherPriorityTaskWoken);
+  }
 }
 
 void SW_FreeRTOS_Timer::ChangePeriod(TimerPeriod period_ms) {
+  BaseType_t xHigherPriorityTaskWoken = pdFALSE;
   period_ms_ = period_ms;
-  xTimerChangePeriod(tim_handle_, pdMS_TO_TICKS(period_ms_), osWaitForever);
-  xTimerStop(tim_handle_, osWaitForever);
+
+  if (!IS_IRQ()) {
+    xTimerChangePeriod(tim_handle_, pdMS_TO_TICKS(period_ms_), osWaitForever);
+    xTimerStop(tim_handle_, osWaitForever);
+  } else {
+    if (xTimerChangePeriodFromISR(tim_handle_, pdMS_TO_TICKS(period_ms_), &xHigherPriorityTaskWoken) != pdTRUE) {
+      Error_Handler();
+    }
+    if (xTimerStopFromISR(tim_handle_, &xHigherPriorityTaskWoken) != pdTRUE) {
+      Error_Handler();
+    }
+    portYIELD_FROM_ISR (xHigherPriorityTaskWoken);
+  }
+
 //  if (xTimerIsTimerActive(tim_handle_) == pdFALSE) {
 //    xTimerChangePeriod(tim_handle_, pdMS_TO_TICKS(period_ms_), osWaitForever);
 //    xTimerStop(tim_handle_, osWaitForever);

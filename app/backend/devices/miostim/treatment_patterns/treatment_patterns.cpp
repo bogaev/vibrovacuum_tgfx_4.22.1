@@ -2,10 +2,10 @@
 #include "utility\shared_objects.h"
 
 namespace miostim {
- 
+
 std::unique_ptr<PwmController>* TreatPattern::pwm_controllers_{};
 uint32_t TreatPattern::sample_rate_{};
-  
+
 TreatPattern::TreatPattern(std::unique_ptr<PwmController>* pwm_controllers,
                            uint32_t sample_rate,
                            bool is_state_on)
@@ -70,7 +70,7 @@ void TreatPattern::BufferReadyHandler(PwmController* pdma) {
 }
 
 void TreatPattern::UpdateStageBufferSize(int stage, float mod_freq) {
-  float new_buf = ( (mod_values::CARRIER_FREQ - mod_freq) / mod_freq ) 
+  float new_buf = ( (mod_values::CARRIER_FREQ - mod_freq) / mod_freq )
                       * POINTS_PER_PERIOD_NUM;
   new_buf = (new_buf == 0 ? 2. * POINTS_PER_PERIOD_NUM : new_buf);
   stage_params_[stage].buf_size = (size_t) (2. * new_buf);
@@ -96,7 +96,7 @@ void TreatPattern::Stop() {
   for(uint32_t i = 0; i < MAX_PATTERN_STAGES; ++i) {
     pwm_controllers_[i]->Stop();
   }
-  treat_timer_.Stop();
+//  treat_timer_.Stop();
 }
 
 void TreatPattern::Run() {
@@ -113,7 +113,7 @@ void TreatPattern::Run() {
 
 void TreatPattern::SetState(bool state) {
   is_state_on_ = state;
-  
+
   if (is_state_on_) {
     Run();
     if (treat_timer_.GetTimeMS() > 1) {
@@ -155,7 +155,7 @@ void TreatPattern::SetModFreq(enFreqMods freq) {
     pwm_controllers_[FLEX]->SetSignal(SIG_GEN_AMP_MOD,
                                       SIG_GEN_PARAM_FREQ,
                                       FREQ_MOD[freq_mod_]);
-    
+
     UpdateStageBufferSize(FLEX, FREQ_MOD[freq_mod_]);
     TryUpdateDMABuffer(FLEX);
   }
@@ -191,7 +191,7 @@ void TreatPattern::SwitchStage() {
 }
 
 void TreatPattern::SetupPattern() {
-  
+
   pwm_controllers_[FLEX]->SetSignal(SIG_GEN_CARRIER,
                                     SIG_GEN_PARAM_SIGNAL_TYPE,
                                     SIG_GEN_TYPE_SINUS);
@@ -203,15 +203,15 @@ void TreatPattern::SetupPattern() {
   pwm_controllers_[FLEX]->SetSignal(SIG_GEN_AMP_MOD,
                                     SIG_GEN_PARAM_SIGNAL_TYPE,
                                     SIG_GEN_TYPE_SINUS);
-  
+
   pwm_controllers_[FLEX]->SetSignal(SIG_GEN_AMP_MOD,
                                     SIG_GEN_PARAM_FREQ,
                                     FREQ_MOD[freq_mod_]);
-  
+
   pwm_controllers_[FLEX]->SetSignal(SIG_GEN_AMP_MOD,
                                     SIG_GEN_PARAM_AMP_DEPTH,
                                     DEPTH_MOD_PERCENT[depth_mod_]);
-  
+
   UpdateStageBufferSize(FLEX, FREQ_MOD[freq_mod_]);
   stages_init_ = {{FLEX, MIN_ACT_TIME_MS}};
   SetupStages();
@@ -238,11 +238,11 @@ void PatternModulatedNonModulated::SetupPattern() {
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_CARRIER,
                                  SIG_GEN_PARAM_SIGNAL_TYPE,
                                  SIG_GEN_TYPE_SINUS);
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_CARRIER,
                                  SIG_GEN_PARAM_FREQ,
                                  mod_values::CARRIER_FREQ);
-  
+
   UpdateStageBufferSize(FIXED, FREQ_MOD[freq_mod_]);
   stages_init_ = { {FLEX, MIN_ACT_TIME_MS}, {FIXED, MIN_ACT_TIME_MS} };
   SetupStages();
@@ -251,27 +251,27 @@ void PatternModulatedNonModulated::SetupPattern() {
 // Pattern 4 ================================================================
 
 void PatternModulatedFixed150::SetupPattern() {
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_CARRIER,
                                  SIG_GEN_PARAM_SIGNAL_TYPE,
                                  SIG_GEN_TYPE_SINUS);
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_CARRIER,
                                  SIG_GEN_PARAM_FREQ,
                                  mod_values::CARRIER_FREQ);
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_AMP_MOD,
                                  SIG_GEN_PARAM_SIGNAL_TYPE,
                                  SIG_GEN_TYPE_SINUS);
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_AMP_MOD,
                                  SIG_GEN_PARAM_FREQ,
                                  mod_values::FIXED_MOD_FREQ);
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_AMP_MOD,
                                  SIG_GEN_PARAM_AMP_DEPTH,
                                  50);
-  
+
   UpdateStageBufferSize(FIXED, FREQ_MOD[freq_mod_]);
   stages_init_ = {{FLEX, MIN_ACT_TIME_MS}, {FIXED, MIN_ACT_TIME_MS}};
   SetupStages();
@@ -280,27 +280,27 @@ void PatternModulatedFixed150::SetupPattern() {
 // Pattern 5 ================================================================
 
 void PatternModulatedFixed150Paused::SetupPattern() {
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_CARRIER,
                                  SIG_GEN_PARAM_SIGNAL_TYPE,
                                  SIG_GEN_TYPE_SINUS);
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_CARRIER,
                                  SIG_GEN_PARAM_FREQ,
                                  mod_values::CARRIER_FREQ);
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_AMP_MOD,
                                  SIG_GEN_PARAM_SIGNAL_TYPE,
                                  SIG_GEN_TYPE_SINUS);
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_AMP_MOD,
                                  SIG_GEN_PARAM_FREQ,
                                  mod_values::FIXED_MOD_FREQ);
-  
+
   pwm_controllers_[FIXED]->SetSignal(SIG_GEN_AMP_MOD,
                                  SIG_GEN_PARAM_AMP_DEPTH,
                                  50);
-  
+
   UpdateStageBufferSize(FIXED, FREQ_MOD[freq_mod_]);
   stages_init_ = {{FLEX, MIN_ACT_TIME_MS}, {FIXED, MIN_ACT_TIME_MS}, {PAUSE, MIN_ACT_TIME_MS}};
   SetupStages();
