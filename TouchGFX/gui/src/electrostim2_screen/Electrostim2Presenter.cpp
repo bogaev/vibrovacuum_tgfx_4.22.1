@@ -26,11 +26,6 @@ int Electrostim2Presenter::GetMinutes() {
 void Electrostim2Presenter::OnElectrostimTest(bool state) {
 #ifndef NO_ELECTRO
   model->GetBackend().Miostim().SetState(state);
-//  if (state) {
-//    model->GetBackend().Miostim().Run();
-//  } else {
-//    model->GetBackend().Miostim().Stop();
-//  }
 #endif
 }
 

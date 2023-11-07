@@ -118,7 +118,7 @@ void Model::OnButtonStart(bool state)
         backend_->Coil().SetState(is_vibration_on_);
     #endif
     is_electrostim_expired_ = !GetElectrostimCheck();
-    #ifndef NO_COIL
+    #ifndef NO_ELECTRO
 //        backend_->Miostim().Run();
         backend_->Miostim().SetState(is_electrostim_on_);
     #endif
@@ -137,7 +137,7 @@ void Model::OnButtonStart(bool state)
     backend_->Coil().Stop();
     backend_->Coil().SetState(false);
     #endif
-    #ifndef NO_COIL
+    #ifndef NO_ELECTRO
     backend_->Miostim().Stop();
     backend_->Miostim().SetState(false);
     #endif
